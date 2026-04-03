@@ -1,0 +1,153 @@
+2.1 scratch
+
+scratch adalah aplikasi mempelajari pemrogaman terbesat di dunia untuk anak-anak dengan antarnuka visual sederhana yang memungkinkan remaja membuat cerita, permainan, dan animasi digital
+
+oleh scratch foundation, organisasi nirlaba
+
+akses di https://scratch.mid.edu/create
+
+gratis dan tersedia dalam 70 bahasa
+
+ada block, script, canvas, sprite dan stage
+
+
+A. Variable, Input dan Control
+
+input adlaah sebuah proses meminta masukan dari pengguna dan hasil masukannya akan disimpan dalam sebuah variable, menggunakan blok ask and wait pada kategori sensing, dan dapat ditempatkan di blok kode sprite manapun
+
+variable adalah nama yang digunakan untuk menyimpan sebuah nilai, nilai dapat diubah dengan blok set to variable, change variable by. dapat dikenali di semua sprite atau global variable, atau hanya sprite yang aktif saat dibuat atau local variable
+
+kode control dapat mengatur jalannya program, pengulangan dan kondisi
+
+
+B. Custom Block
+
+adalah sebuah block pada scratch yang dapat dibuat sendiri dan dapat disesuaikan fungsinya. custom block sama dengan fungtion/prosedur
+
+dengan custom block dapat membuat block sendiri yang nanti dapat berisi blok lainnya, dapat menerima input sehingga intruksi didalamnya dapat dijalankan dengan nilai yang berbeda
+
+langkah my block -> make a block
+
+
+2.2 Blockly
+
+adalah suatu tools yang dapat membantu program sedergana dengan menggunakan blok-blok, mirip scratch
+
+pengetikan code program diganti dengan menggabungkan blok dengan drag and drop
+
+setiap blok merepresentasikan konsep dasar pemrograman seperti, variabel, ekspresi logika, looping, dan lain"
+
+dapat di terjemahkna ke JS, PHP, Python, dll
+
+dapat diakses dengan https://blocly.games/
+
+- puzzle -> menyusun blok ang berisi keterangan foto hewan ke bok hewan yang sesuai, untuk mengenali block pada blockly
+
+- maze -> diminta menggerakan sprite agar berjalan sampai tujuan, mengasah kemampuan logika berpokir
+
+- bird -> diminta menggerakkan burung ahar dapat mengambil caciing dan sampai ke sarang, belajar koordinat, sudut dan logika berpikir
+
+- turtle -> menggerakan turtle menggambar sesuai pola yang disediakan,  belajar pengenalan pola dam perulangan
+
+- movie -> membuat sprite sederhana dan menggerakkannya sesuai instruksi, belajar membuat aanimasi, dari awal  sampai akhir, ada intervalnya
+
+- music -> membuat music sederahana berdasarkan not balok, mirip turtle, tapi ini pola not balok dan music yang di keluarkan
+
+- pond tutor -> menggerakkan sprite agar menembak sprite target, belajar menggunakan blok kode dan mengetik lasngung jawaban dengan javascript
+
+- pond -> lanjutan pond tutor, ada 3 lawan, dapat memilih langsung menyelesaikan dengan kode blok atau javascript
+
+
+A. puzzle maze
+
+eksplorasi maze untuk menjelajahi maze, menggerakkan sprite dari titik ke tujuan, dengan menggunakan blok yang disediakan : 1. more forward -> maju
+																2. turn left an right -> kiri kanan
+
+harus memiliki strategi agar sprite sampai tujuan meski bloknya terbatas
+
+memiliki 10 level kesulitan
+
+lv 1 -> mudah, lurus 2 langkah
+
+lv 3 -> harus mencapai tujuan dengan blok terbatas
+
+lv 10 -> paling sulit
+
+
+B. Games Music
+
+memiliki 10 level, mulai lv 1 dengan menyusun 4 blok note balok, sampai lv 9 menggunakan beberapa fungsi/prosedur, jenis not balok dan suara yang dihasilkan beragam, di lv 10 membuat lagu dengan menyusun note balok sendiri
+
+lv 1 -> memasangkan blok play..note dengan block when..clicked
+
+lv 2 -> permasalahan dimana terdapat dua ruas birama yang ingin dimainkan, selesaikan dengan memasng blok seprti lv 1 dua kali, akan ada dialog blok juga untuk menggunakan fungsi
+
+lv 3 -> menemukan 2 bagian yang masing-masingnya berulang sebanyak 2 kali, setiap potongan nada yang berulang, dapat menggunakan fungsi
+
+
+2.3 Program Prosedural
+
+pemrograman dilakukan berdasarkan konsep bahwa komputer punya tiga eleman: input -> pemroses utama (CPU), perangkat output. Komputer dapat menerima input, yang akan ditampung memori, dapat disimpan atau diambil kembali dalam sebuah variable, isi variable dapat diubah dan bervariasi, komputer dapat menampilkan isi dengan print.
+
+komponen yang melakukan proses perhitungan adalah ALU -> ada dalam CPU, program akan mengendalikan komputer dakam IPO
+
+dengan program dapat memerintah komputer:
+
+1. Menerima input, simpan dalam variabel, ambil isinya dgn menyebut nama var
+
+2. mengeluarkan output, dengan print, write atau display, membuat komputer menampilkan nilai yang disimpan dalam variable. cth: menyala matikan lampu
+
+3. melakukan perhitungan aritmatika dan logika, sesuai operasi aritmatika (x, :, +, -) atau operasi logika (and, or, not) atau operasi perbandingan (<,>,=)
+
+linknya sudah tidak bisa diakses, tapi kurleb sama dengan scratch atau blockly
+
+
+A. Variable
+
+digunakan untuk menyimpan nilai, harus memiliki nama, dan mudah dikenali, berbeda dengan lain
+
+tips, buat yang menggambarkan fungsinya, cth: namaSiswa, hindari penamaan yang panjang cth: namaLengkapSiswaKelasSatu
+
+variable dapat menyimpan data tertentu, seperti teks dan nomor
+
+
+B. Percabangan 
+
+kemampuan pengambilan keputusan, supaya dapat memilih antara beberapa alternatif atau keputusan
+
+hal yang harus dilakukan komputer yaitu:
+
+1. kondisi benar atau salah
+2. memiliki keputusan atau alternatif berdasarkan kondisi tersebut
+
+memeriksa kebenaran dengan operasi perbandingan dan operasi logika diantaranya:
+
+1. = -> untuk memriksa apakah bernilai sama atau tidak
+2. =/= -> bernilai beda atau tidak
+3. < -> lebih kecil
+4. > -> lebih besar
+
+ada juga operasi logika, pernyataan akan bernilai false kalau salah dan true kalau benar
+
+
+C. Pengulangan
+
+dalam konsep pemorgraman ini dekanal sebagai repetition atau loops, 
+
+1. block repeat..times
+
+melakukan sebanyak pengulangan yang di tentukan, 
+
+yang perlu diisi adalah tindakan apa yang harus di ulang dan berapa kali
+
+2. repeat while
+
+melakukan perulangan selama kondisi terpenuhi, dengan kata lain, jika kondisi sudah tidak terpenuhi maka perulangan berakhir
+
+
+
+
+
+
+
+
