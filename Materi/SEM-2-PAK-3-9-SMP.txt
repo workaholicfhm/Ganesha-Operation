@@ -1,0 +1,108 @@
+Materi 9 SMP GO
+
+3.1 Penjelasan
+
+praktik litas bidang informatika adalah penerapan berpikir komputasional untuk menyelesaikan berbagai permasalahan di kehidupan sehari-hari
+seperti:
+otonatisasi rumah, transportasi, pertanian dan lain-lain
+
+selalu menerapkan IoT (internet of things) -> konsep dimana suatu benda atau objek ditanamkan teknologi seperti sensor dan software dengan tujuan untuk berkomunikasi, mengendalikan,
+menghubungkan dan bertukar data melalui perangkat lain melalui jaringan internt 
+
+elemen:
+a. sensor -> mendeteksi input dari lingkungan sekitar
+b. perangkat keras -> mellihat data sensor, mengambil keputusan untuk respon data, mengikuti aturan
+c. perangkat lunak -> mengelola pengoperasian perangkat , mengelola instruksi dan meneruskannya
+d. koneksi internet -> mengirim dan menerima data, intruksi dari perangkat lain
+
+microcontroller -> perangkat keras yang digunakan untuk mengelola sensor dan di pasang perangkat lunak
+
+Arduino uno -> papan elektronik yang digunakan untuk membuat perangkat digital, yang dapat mengendalikan perangkat lain secara interaktif
+
+bagian dalam Arduino uno:
+1. pin digital -> media input/output
+2. pin analog
+3. pin power -> memberikan tegangan ke perangkat elektronik lain
+4. soket power -> memberikan daya ke Arduino uno
+5. port usb -> upload program dari pc ke Arduino uno
+6. tombol reset -> reset program Arduino
+
+komponen yang dapat diterapkan ke Arduino -> LED, Breadboard, kabel jumper male to male, software pictoblox IDE
+
+Led -> Light-Emiting Diode pereangkat elektronik yang merubah listrik menjadi cahaya, memiliki 2 pin, pendek untuk memberikan tegangan, panjang untuk mengeluarkan cahaya
+
+breadboard -> papan project, papan yang digunakan untuk membuat rangkaian elektronik yang bersifat sementara, memiliki total 400 lubang yg terdiri dari warna merah merah (jalur positif yang terhubung ke pin power) dan biru (jalur negatif untuk disambungkan ke modul elektronik) jalur tengah digunakan untuk menyimpan modul elektronik, seprti sensor dll
+
+kabel jumper male to male -> untuk menghubungkan komponen elektrinik ke Arduino uno
+
+pictoblox ide -> software untuk menyusun program yang akan diunggah ke Arduino
+
+3.2 Iot sensor sederhana
+
+contoh penerapan iot sensor sederhana -> lampu lalu lintas.
+
+alat yang dibutuhkan:
+- Arduino uno -> media pengontrol modul dan sensor akuator
+- LED 1 buah -> indikator lampu
+- breadboard -> media merangkai elektronik sederhana
+- kabel jumper male to male -> penghubung Arduino ke sensor dan modul lain
+- pictoblox ide -> aplikasi pemrograman pada Arduino
+
+
+3.3 Iot sensor cahaya tanaman
+
+smart farming berbasis iot -> kontrol terhadap kondisi suhu, intensitas cahaya, dam kelembapan udara
+
+alat dan bahan yang dibutuhkan:
+- pictoblox ide
+- Modul DHT11 -> sensor suhu dan kelembapan
+- modul sensor LDR (light dependen resistor) -> sensor untuk mendeteksi cahaya yang ditangkap oleh tanaman
+- kabel jumper
+- Arduino uno r3
+- Kabel USB Type A to Type B -> untuk upload
+- Breadboard
+- Modul power power supply breadboard -> input supply tegangan sistem pada breadboard
+- adaptop 9 volt -> pemasok tegangan pada Arduino uno
+- Selotip -> merapikan kabel
+- gunting -> untuk memotong kabel dan selotip
+- wadah tertutup -> tempat menyimpan IOT yang sudah di rakit
+- laptop -> untuk programming
+
+
+3.4 Iot sensor kelembapan tanah
+
+sensor kelembapan tanah -> untuk mengetahui kelembapan tanah, biasanya di kombinasi dengan pompa air otomatis
+
+alat dan bahan yang digunakan:
+- Pictoblox Ide
+- Modul sensor kelembapan tanah -> untuk mengetahui kelembapan tanah
+- LCD 16 x 2 + 12C -> media untuk menampilkan informasi suhu dan kelembapan
+- Modul sensor hujan -> untuk mendeteksi hujan
+- Kabel jumper
+- Arduino uno r3
+- kabel usb type a to b
+- breadboard
+- modul power supply
+- adaptor 9 volt
+- selotip
+- gunting
+- wadah tertutup
+- laptop
+
+3.5 Robot LIne FOllower
+
+Robot line follower -> robot akan bergerak mengikuti garis hitam dari track yang telah ditentukan, bisa tahu kapan waktu berbelok, bergerak dan berhenti
+
+alat:
+- Frame Robot 2d -> sudah include motor, roda, tempat baterai
+- Dual h-bridge motor driver (l298n) DC -> penghubung mikrokontroller dengan motr DC pada robot
+- Baterai AA 6v -> 4 buah
+- sensor pendeteksi garis
+- pictobox idle
+- kabel jumper male to male dan male to female
+- Arduino uno r3
+- kable usb type a to b
+- selotip
+- gunting
+- wadah tertutup
+- lapotopo
