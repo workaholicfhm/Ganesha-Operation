@@ -143,17 +143,20 @@ Langkah-langkah scrapping:
 
 1. Parsing alamat WEB
 
- ------------------------------------------------------- 
+=== start table ===
+|baris -> penjelasan
 | 1-3 memasang library Pandas, Requests, BeautifulSoup	|
 |							|
 | 5 menyimpan alamat website				|
 | 6 mengambil isi halaman				|
 | 7 HTML diubah jadi struktur yang mudah dibaca		|
 | 8 menampilkan seluruh HTML ke layar			|
- -------------------------------------------------------
+=== end table ===
 
 2. Olah kode HTML untuk mengambil data
 
+=== start table ===
+|baris -> penjelasan
 | 8 Ambil semua blok lowongan kerja di HTML 
 |
 | 10 - 12 siapkan array kosong untuk menyimpan hasil
@@ -168,11 +171,54 @@ Langkah-langkah scrapping:
 | 27 - 30 ambil data gaji dari index 0, kalau tidak ada, ambil data dari index 1
 |
 | 32 -34 tampilkan array
+
+=== end table ===
  
 3. Bingkai data Array
 
+=== start table ===
+|baris -> penjelasan
 | 32 - 36 buat tabel dengan kolom posisi, instansi, gaji
 | 37 tampilkan
+=== end table ===
 
 C. Visualisasi Data
 
+-> mengubah data tekstual menjadi visual supaya mudah dipahami
+-> bisa berupa: diagram batang, diagram lingkaran, diagram garis, dsb
+
+1. pra pemrosesan data 
+
+-> mengolah data agar dapat di proses
+
+| merubah gaji.append -> variable xgaji
+| xgaji = xgaji.replace(".", " ") -> mengganti (.) jadi kosong ()
+| if (xgaji == "Gaji Dirahasiakan"):
+|   xgaji = 0        -> untuk merubah gaji dirahasiakan jadi 0
+| gaji.append(xgaji) -> memasukkan nilai gaji ke array
+
+2. Visualisasi data
+
+Membuat Diagram -> Library Plotly
+
+=== Start Table ===
+| Baris -> Penjelasan
+| Pasang library tambahan 
+| 1-3 -> + library Poltly
+|
+| Ambil Posisi
+| 15 - 18 -> + lalu masukan dalam variable t3
+| 
+| Ambil Nama Instansi
+| 20 - 21 -> cari tag (a) dalam tag (p)
+| 22 - 25 -> kalau ada, simpan ke t2, kalau tidak, t2 berisi kosong
+| 
+| Gabungkan Posisi dan Instansi
+| 26 -> Cari spasi pertama di t2
+| 27 -> Ambil kata pertama saja dari t2, gabungkan ke t3
+|
+| Tampilkan data
+| 40 - 43 -> Masukan data posisi dan gaji ke lowker
+| 45 -> buat grafik batang, sumbu x = posisi, sumbu y = gaji
+| 46 -> tampilkan grafik
+=== End Table ===
