@@ -1,0 +1,178 @@
+1.1 Penjelasan
+1.1.1 Analisis Data
+Analisa data adalah proses pengumpulan dan pengolahan data yang akan digunakan sebagai pedoman dalam penyelesaian masalah
+
+Data yang sudah dikumpulkan akan diolah dalam bentuk tekstual atau visual agar mudah dimengerti
+
+IDE google colab -> bahasa python
+
+python adalah bahsa pemrogaman tingkat tinggi yang paling populer
+-> Pengembangan WEB
+-> Aplikasi atau Software
+-> Analisis Data
+
+Web scrapping adalah ekstraksi terhadap sejumlah data yang terdapat pada web tertentu
+
+A. Pengenalan Perkakas Analisis Data
+
+1. Google Colaboratory
+
+Disediakan oleh Google secara online, jadi tidak perlu melakukan instalasi
+
+Tekan tombol run cell (segitiga bulat) untuk melakukan running program
+
+2. Python
+
+a. Cetak Data (print)
+ ---------------------------------------
+| print("1 + 3") 			|
+|					|
+| Hasil = 1 + 3				|
+|					|
+|					|
+| print(1 + 3)				|
+|					|
+| Hasil = 4				|
+|					|
+|					|
+| print("1" + "3") 			|
+|					|
+| Hasil = 13				|
+ ---------------------------------------
+
+Tanda petik digunakan untuk mencetak string
+
+string adalah teks atau kumpulan karakter
+
+bisa menggunakan petik (') dan petik ganda (")
+
+b. Pemberian Nilai Data (Assignment)
+
+assignment -> pengisian atau pemberian nilai data 
+
+caranya adalah dengan menyediakan sebuah variabl dan diisi dengan suatu nilai menggunakan (=)
+
+ -----------------------
+| andi = 10		|
+| bila = 10		|
+| total = andi + bila	|
+|			|
+| total -> hasil = 20	|
+ -----------------------
+
+c. banyak nilai untuk satu variabel (array)
+
+array -> menyimpan banyak data untuk satu variabel
+
+dengan memberi ([ ])
+
+ ---------------------------------------
+| data = [1, 2, 3, 4, 5, 6]		|
+| print(data)				|
+| print(data[1])			|
+|					|
+| Hasil -> [1, 2, 3, 4, 5, 6]		|
+| Hasil -> 2				|
+ ---------------------------------------
+
+array selalu dimulai dari 0
+
+ ---------------------------------------
+| data[2] = 10				|
+| print(data)				|
+|					|
+| Hasil -> [1, 2, 10, 4, 5, 6]		|
+ ---------------------------------------
+
+.append -> untuk menambahkan nilai ke dalam array
+
+ ---------------------------------------
+| data.append(9)			|
+| print(data)				|
+|					|
+| Hasil -> [1, 2, 10, 4, 5, 6, 9]	|
+ ---------------------------------------
+
+d. Penelusuran Data/Pengulangan (Loop: For)
+
+for -> perintah untuk melakukan perulangan terhadap sekumpulan data
+
+ -----------------------------------------------
+| indeks = 0					|
+| for elemen in data:				|
+|   print("elemen ke", indeks, "=", elemen"):	|
+|   indeks = indeks + 1				|
+|						|
+| Hasil -> Elemen ke 0 = 1			|
+|          Elemen ke 1 = 2			|
+|          Dst...				|
+ -----------------------------------------------
+
+perintah untuk looping lain -> while
+
+e. Pustaka Kode (Libarary inport)
+
+Library atau pustaka adalah koleksi program dan paket yang tersedia untuk berbagai penggunaan contoh:
+-> pandas
+
+pandas adalah library di python yang dipakai untuk mengolah data dengan mudah
+seperti excel, tapi dijalankan dengan code, bisa baca, edit, dan analisis data dengan cepat
+
+ ---------------------------------------
+| import pandas as pd			|
+|					|
+| siswa = ["Ari", "Ira", "Andi", ...]	|
+| Nilai =  pd.DataFrame ({		|
+|	"Siswa": siswa,			|
+|	"Nilai": nilai			|
+|	})				|
+| Nilai					|
+|					|
+| Hasil :				|
+ ---------------------------------------
+
+
+B. Koleksi Data/Web Scrapping
+
+Web scrapping -> mengoleksi data dari situs web
+
+HTML parsing -> proses menganalisis kode HTML mentah untuk memahami strukturnya dan diubah menjadi format yang lebih mudah dikelola
+-> BeautifulSoup, lxml
+
+Langkah-langkah scrapping:
+
+1. Parsing alamat WEB
+
+ ------------------------------------------------------- 
+| 1-3 memasang library Pandas, Requests, BeautifulSoup	|
+|							|
+| 5 menyimpan alamat website				|
+| 6 mengambil isi halaman				|
+| 7 HTML diubah jadi struktur yang mudah dibaca		|
+| 8 menampilkan seluruh HTML ke layar			|
+ -------------------------------------------------------
+
+2. Olah kode HTML untuk mengambil data
+
+| 8 Ambil semua blok lowongan kerja di HTML 
+|
+| 10 - 12 siapkan array kosong untuk menyimpan hasil
+|
+| 14 mulai perulangan
+| 15 - 17 cari tag (a) dalam tag (h3) lalu ambil isinya
+|
+| 19 - 20 cari tag (a) dalam tag (p)
+| 21 - 24 kalau ada, ambil isinya, kalau kosong, isi dengan (-)
+| 
+| 26 cari tag (span) dalam tag (p) 
+| 27 - 30 ambil data gaji dari index 0, kalau tidak ada, ambil data dari index 1
+|
+| 32 -34 tampilkan array
+ 
+3. Bingkai data Array
+
+| 32 - 36 buat tabel dengan kolom posisi, instansi, gaji
+| 37 tampilkan
+
+C. Visualisasi Data
+
