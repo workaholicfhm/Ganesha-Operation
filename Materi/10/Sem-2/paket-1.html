@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analisis Data</title>
+<style>
+body { font-family: Arial, sans-serif; line-height: 1.6; padding: 24px; }
+h1,h2,h3,h4 { margin-top: 1.2em; }
+pre { background:#f4f4f4; padding:12px; border-radius:6px; }
+table { border-collapse: collapse; width:100%; margin:16px 0; }
+th,td { border:1px solid #333; padding:8px; vertical-align: top; }
+</style>
+</head>
+<body>
+
+<h1>Analisis Data</h1>
+
+<h2>1.1 Penjelasan</h2>
+<h3>1.1.1 Analisis Data</h3>
+
+<p>Analisis data adalah proses pengumpulan dan pengolahan data yang akan digunakan sebagai pedoman dalam penyelesaian masalah.</p>
+
+<p>Data yang sudah dikumpulkan akan diolah dalam bentuk tekstual atau visual agar mudah dimengerti.</p>
+
+<p>IDE Google Colab → bahasa Python.</p>
+
+<p>Python adalah bahasa pemrograman tingkat tinggi yang paling populer:</p>
+<ul>
+<li>Pengembangan WEB</li>
+<li>Aplikasi atau Software</li>
+<li>Analisis Data</li>
+</ul>
+
+<p>Web scraping adalah ekstraksi terhadap sejumlah data yang terdapat pada web tertentu.</p>
+
+<h3>A. Pengenalan Perkakas Analisis Data</h3>
+
+<h4>1. Google Colaboratory</h4>
+<p>Disediakan oleh Google secara online, jadi tidak perlu melakukan instalasi.</p>
+<p>Tekan tombol run cell (segitiga bulat) untuk melakukan running program.</p>
+
+<h4>2. Python</h4>
+
+<h4>a. Cetak Data (print)</h4>
+<pre><code>
+print("1 + 3")
+
+Hasil = 1 + 3
+
+print(1 + 3)
+
+Hasil = 4
+
+print("1" + "3")
+
+Hasil = 13
+</code></pre>
+
+<p>Tanda petik digunakan untuk mencetak string.</p>
+<p>String adalah teks atau kumpulan karakter.</p>
+<p>Bisa menggunakan petik (') dan petik ganda (").</p>
+
+<h4>b. Pemberian Nilai Data (Assignment)</h4>
+<p>Assignment adalah pengisian atau pemberian nilai data.</p>
+<p>Caranya adalah dengan menyediakan sebuah variabel dan diisi dengan suatu nilai menggunakan (=).</p>
+
+<pre><code>
+andi = 10
+bila = 10
+total = andi + bila
+
+total -> hasil = 20
+</code></pre>
+
+<h4>c. Banyak nilai untuk satu variabel (array)</h4>
+<p>Array menyimpan banyak data untuk satu variabel dengan memberi ([ ]).</p>
+
+<pre><code>
+data = [1, 2, 3, 4, 5, 6]
+print(data)
+print(data[1])
+
+Hasil -> [1, 2, 3, 4, 5, 6]
+Hasil -> 2
+</code></pre>
+
+<p>Array selalu dimulai dari 0.</p>
+
+<pre><code>
+data[2] = 10
+print(data)
+
+Hasil -> [1, 2, 10, 4, 5, 6]
+</code></pre>
+
+<p>.append untuk menambahkan nilai ke dalam array.</p>
+
+<pre><code>
+data.append(9)
+print(data)
+
+Hasil -> [1, 2, 10, 4, 5, 6, 9]
+</code></pre>
+
+<h4>d. Penelusuran Data / Pengulangan (Loop: For)</h4>
+
+<pre><code>
+indeks = 0
+for elemen in data:
+    print("elemen ke", indeks, "=", elemen)
+    indeks = indeks + 1
+
+Hasil -> Elemen ke 0 = 1
+         Elemen ke 1 = 2
+         Dst...
+</code></pre>
+
+<p>Perintah looping lain → while.</p>
+
+<h4>e. Pustaka Kode (Library import)</h4>
+
+<p>Library atau pustaka adalah koleksi program dan paket yang tersedia untuk berbagai penggunaan, contoh: pandas.</p>
+
+<p>Pandas adalah library di Python yang dipakai untuk mengolah data dengan mudah seperti Excel, tetapi dijalankan dengan code.</p>
+
+<pre><code>
+import pandas as pd
+
+siswa = ["Ari", "Ira", "Andi", ...]
+Nilai = pd.DataFrame({
+    "Siswa": siswa,
+    "Nilai": nilai
+})
+
+Nilai
+</code></pre>
+
+<h3>B. Koleksi Data / Web Scraping</h3>
+
+<p>Web scraping adalah mengoleksi data dari situs web.</p>
+
+<p>HTML parsing adalah proses menganalisis kode HTML mentah untuk memahami strukturnya dan diubah menjadi format yang lebih mudah dikelola.</p>
+
+<p>Contoh: BeautifulSoup, lxml.</p>
+
+<h4>Langkah-langkah scraping</h4>
+
+<h4>1. Parsing alamat WEB</h4>
+<table>
+<tr><th>Baris</th><th>Penjelasan</th></tr>
+<tr><td>1-3</td><td>Memasang library Pandas, Requests, BeautifulSoup</td></tr>
+<tr><td>5</td><td>Menyimpan alamat website</td></tr>
+<tr><td>6</td><td>Mengambil isi halaman</td></tr>
+<tr><td>7</td><td>HTML diubah jadi struktur yang mudah dibaca</td></tr>
+<tr><td>8</td><td>Menampilkan seluruh HTML ke layar</td></tr>
+</table>
+
+<h4>2. Olah kode HTML untuk mengambil data</h4>
+<table>
+<tr><th>Baris</th><th>Penjelasan</th></tr>
+<tr><td>8</td><td>Ambil semua blok lowongan kerja di HTML</td></tr>
+<tr><td>10-12</td><td>Siapkan array kosong untuk menyimpan hasil</td></tr>
+<tr><td>14</td><td>Mulai perulangan</td></tr>
+<tr><td>15-17</td><td>Cari tag (a) dalam tag (h3) lalu ambil isinya</td></tr>
+<tr><td>19-24</td><td>Cari tag (a) dalam tag (p), jika ada ambil, jika tidak isi (-)</td></tr>
+<tr><td>26-30</td><td>Ambil data gaji dari index</td></tr>
+<tr><td>32-34</td><td>Tampilkan array</td></tr>
+</table>
+
+<h4>3. Bingkai data Array</h4>
+<table>
+<tr><th>Baris</th><th>Penjelasan</th></tr>
+<tr><td>32-36</td><td>Buat tabel dengan kolom posisi, instansi, gaji</td></tr>
+<tr><td>37</td><td>Tampilkan</td></tr>
+</table>
+
+<h3>C. Visualisasi Data</h3>
+
+<ul>
+<li>Mengubah data tekstual menjadi visual supaya mudah dipahami</li>
+<li>Bisa berupa diagram batang, lingkaran, garis, dll</li>
+</ul>
+
+<h4>1. Pra pemrosesan data</h4>
+
+<pre><code>
+xgaji = xgaji.replace(".", " ")
+if (xgaji == "Gaji Dirahasiakan"):
+    xgaji = 0
+gaji.append(xgaji)
+</code></pre>
+
+<h4>2. Visualisasi data</h4>
+
+<p>Membuat diagram menggunakan library Plotly.</p>
+
+<table>
+<tr><th>Baris</th><th>Penjelasan</th></tr>
+<tr><td>1-3</td><td>Menambahkan library Plotly</td></tr>
+<tr><td>15-18</td><td>Ambil posisi ke variabel</td></tr>
+<tr><td>20-25</td><td>Ambil nama instansi</td></tr>
+<tr><td>26-27</td><td>Gabungkan posisi dan instansi</td></tr>
+<tr><td>40-46</td><td>Tampilkan grafik batang</td></tr>
+</table>
+
+</body>
+</html>
