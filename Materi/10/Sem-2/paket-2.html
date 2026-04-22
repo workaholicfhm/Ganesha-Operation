@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Algoritma dan Pemrograman 1</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true });</script>
+<style>
+body { font-family: Arial, sans-serif; line-height: 1.6; padding: 24px; }
+h1,h2,h3,h4 { margin-top: 1.2em; }
+pre { background:#f4f4f4; padding:12px; border-radius:6px; }
+table { border-collapse: collapse; width:100%; margin:16px 0; }
+th,td { border:1px solid #333; padding:8px; }
+ul { margin-top:6px; }
+</style>
+</head>
+<body>
+
+<h1>Algoritma dan Pemrograman 1</h1>
+
+<h2>2.1.1 Algoritma</h2>
+
+<p>Algoritma adalah suatu kumpulan instruksi terstruktur dan terbatas yang dapat diimplementasikan dalam bentuk program komputer untuk menyelesaikan suatu permasalahan.</p>
+
+<p>Merupakan strategi atau "resep" untuk menyelesaikan suatu masalah.</p>
+
+<p>Ada dua cara:</p>
+<ul>
+<li>Diagram alir</li>
+<li>Pseudocode</li>
+</ul>
+
+<h3>A. Diagram Alir</h3>
+
+<p>Dibuat dalam bentuk aliran simbol yang dapat ditelusuri dari suatu titik hingga titik akhir dari program.</p>
+
+<p>Simbol standar ANSI/ISO:</p>
+<ul>
+<li>Garis alir → arah yang menunjukkan aliran program dari awal hingga akhir</li>
+<li>Terminator → titik awal / akhir suatu program</li>
+<li>Proses → kegiatan komputasi yang dilakukan oleh program</li>
+<li>Keputusan → titik percabangan yang salah satu cabangnya dapat dilalui oleh program berdasarkan kondisi</li>
+<li>Masukan/Keluaran →</li>
+<li>Subprogram → kegiatan atau proses lain yang telah didefinisikan sebelumnya</li>
+<li>Penghubung dalam halaman → menghubungkan suatu titik pada diagram alir ke titik lain pada halaman yang sama</li>
+<li>Penghubung antar halaman → menghubungkan suatu titik pada diagram alir pada halaman lain yang berbeda</li>
+</ul>
+
+<h4>Diagram alir menghitung luas persegi</h4>
+
+<div class="mermaid">
+flowchart TB
+    n1(["start"]) --> n3["READ sisi"]
+    n4["PRINT luas"] --> n2(["end"])
+    n3 --> n5["luas = sisi * sisi"]
+    n5 --> n4
+</div>
+
+<pre><code>
+input : Nilai panjang sisi persegi
+output : Luas persegi
+
+input sisi
+luas <= sisi * sisi
+print luas
+</code></pre>
+
+<h4>2. Diagram alir menentukan hasil pembagian</h4>
+
+<div class="mermaid">
+flowchart TB
+    n1(["Start"]) --> n2["READ pembilang, penyebut"]
+    n2 --> n3["penyebut = 0?"]
+    n3 -- No --> n4["Hasil = pembilang/penyebut"]
+    n3 -- Yes --> n6["PRINT penyebut tidak boleh nol"]
+    n4 --> n5["PRINT Hasil"]
+    n6 --> n7(["END"])
+    n5 --> n7
+</div>
+
+<pre><code>
+Input : pembilang, penyebut
+Output : hasil pembagian tercetak
+
+input pembilang, penyebut
+if penyebut = 0
+print "penyebut tidak boleh kosong"
+
+else
+hasil <= pembilang/penyebut
+print hasil
+</code></pre>
+
+<h4>3. Diagram alir menghitung mundur dari N hingga 1</h4>
+
+<div class="mermaid">
+flowchart TB
+    n1(["Start"]) --> n2["READ N"]
+    n2 --> n3["N > 0"]
+    n3 -- Yes --> n4["PRINT N"]
+    n3 -- No --> n6(["END"])
+    n4 --> n5["N = N-1"]
+    n5 --> n3
+</div>
+
+<h3>B. Pseudocode</h3>
+
+<p>Pseudocode (kode semu atau kode pseudo) adalah suatu bahasa buatan manusia yang sifatnya informal untuk mempresentasikan algoritma.</p>
+
+<p>Untuk menutupi kekurangan diagram alir dalam mempresentasikan konsep-konsep pemrograman.</p>
+
+<p>Hal yang perlu diperhatikan:</p>
+<ul>
+<li>Satu baris hanya untuk satu statement</li>
+<li>Indentasi dalam menuliskan pernyataan</li>
+</ul>
+
+<h2>2.1.2 Bahasa Pemrograman</h2>
+
+<p>Bahasa C banyak dipakai:</p>
+<ul>
+<li>Kontrol peralatan</li>
+<li>Toolkit pemrograman</li>
+<li>Menulis aplikasi</li>
+</ul>
+
+<h3>A. Membuat Program Bahasa C (CodeBlocks)</h3>
+
+<p>Code::Blocks</p>
+
+<p>Cara instalasi:</p>
+<ul>
+<li>Ketahui sistem operasi</li>
+<li>Download Code::Blocks</li>
+<li>Install</li>
+<li>Buka dan pilih new file</li>
+<li>Tuliskan code</li>
+<li>Simpan dengan format .cpp</li>
+<li>Kompilasi program</li>
+<li>Build Run Program</li>
+</ul>
+
+<h3>B. Struktur Program Bahasa C</h3>
+
+<p>Baris pertama digunakan untuk memasukkan header file stdio.h.</p>
+<p>Baris 2–5 implementasi fungsi main, yang akan dijalankan pertama kali dalam program.</p>
+
+<h4>a. Kata kunci</h4>
+<p>Keyword adalah kata yang sudah memiliki makna khusus yang tidak dapat diubah oleh pemrogram.</p>
+<p>Terdapat 32 kata kunci standar pada bahasa C.</p>
+
+<h4>b. Identifier</h4>
+<p>Nama unik yang dapat diingat dan diberikan pada program C → variabel dan fungsi.</p>
+
+<p>Aturan:</p>
+<ul>
+<li>Tidak boleh sama dengan kata kunci</li>
+<li>Disusun dari kombinasi huruf besar dan kecil, angka, atau underscore</li>
+<li>Harus dimulai dengan huruf atau underscore</li>
+<li>Case-sensitive, beda penulisan, beda identifier</li>
+</ul>
+
+<h4>c. Tipe data</h4>
+
+<p>Nilai yang dimasukkan ke dalam komputer akan disimpan dalam bentuk biner, oleh karena itu perlu memberi tahu program tentang data kita.</p>
+
+<p>Tipe data di bahasa C.</p>
+
+<h4>d. Variabel</h4>
+
+<p>Nilai yang dimasukkan akan disimpan dalam memori, komputer memberikan alamat pada lokasi tersebut namun susah diingat oleh manusia, oleh karena itu kita butuh variabel.</p>
+
+<table>
+<tr><th>Nama tipe</th><th>Jenis data</th><th>Identifier</th><th>Deklarasi</th><th>Dengan nilai awal</th></tr>
+<tr><td>int</td><td>Bilangan bulat</td><td>totalHarga</td><td>int totalHarga;</td><td>int totalHarga = 150000;</td></tr>
+<tr><td>short</td><td>Bilangan bulat</td><td>usia</td><td>short usia;</td><td>short usia = 29;</td></tr>
+<tr><td>long</td><td>Bilangan bulat</td><td>jumlahAtom</td><td>long jumlahAtom;</td><td>long jumlahAtom = 123341234934321;</td></tr>
+<tr><td>float</td><td>Bilangan riil</td><td>jarak</td><td>float jarak;</td><td>float jarak = 2.28;</td></tr>
+<tr><td>double</td><td>Bilangan riil</td><td>galat</td><td>double galat;</td><td>double galat = 0.0000009847;</td></tr>
+<tr><td>char</td><td>Karakter</td><td>huruf</td><td>char huruf;</td><td>char huruf = 'a';</td></tr>
+</table>
+
+<h4>e. Konstanta</h4>
+
+<p>Konstanta dapat dideklarasikan seperti variabel, dengan menambahkan kata kunci const di depan tipe data.</p>
+
+<p>Nilai awal harus langsung diberikan.</p>
+
+<p>Konstanta tidak dapat berubah nilai.</p>
+
+<p>Setiap tipe data memiliki spesifikasi format yang dapat digunakan untuk menjelaskan jenis data kepada program.</p>
+
+<table>
+<tr><td>%c</td><td>menampilkan karakter</td></tr>
+<tr><td>%s</td><td>menampilkan teks string</td></tr>
+<tr><td>%d dan %i</td><td>menampilkan bilangan desimal</td></tr>
+<tr><td>%f</td><td>menampilkan bilangan pecahan</td></tr>
+<tr><td>%o</td><td>menampilkan bilangan oktal</td></tr>
+<tr><td>%x</td><td>menampilkan bilangan heksadesimal</td></tr>
+</table>
+
+<p>Ada juga escape sequence:</p>
+
+<table>
+<tr><td>\n</td><td>newline</td></tr>
+<tr><td>\t</td><td>tab</td></tr>
+<tr><td>\v</td><td>vertikal tab</td></tr>
+<tr><td>\f</td><td>new page</td></tr>
+<tr><td>\b</td><td>backspace</td></tr>
+<tr><td>\r</td><td>carriage return</td></tr>
+<tr><td>\a</td><td>beep, bell</td></tr>
+<tr><td>\\</td><td>garis miring</td></tr>
+<tr><td>\"</td><td>tanda kutip ganda</td></tr>
+<tr><td>\'</td><td>tanda kutip</td></tr>
+</table>
+
+</body>
+</html>
