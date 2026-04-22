@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Level Navigation</title>
+    <style>
+        :root {
+            --primary: #3498db;
+            --bg: #f8f9fa;
+            --text: #2c3e50;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px 30px;
+        }
+
+        .nav-container {
+            width: 90%;
+            max-width: 500px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border: 1px solid #eaeaea;
+            margin-bottom: 50px;
+        }
+
+        /* Elemen Menu Utama */
+        .menu-item {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .menu-header {
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.2s;
+            user-select: none;
+        }
+
+        .menu-header:hover {
+            background-color: #fcfcfc;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+
+        /* Panah Indikator */
+        .chevron {
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #ccc;
+            border-bottom: 2px solid #ccc;
+            transform: rotate(-45deg);
+            transition: transform 0.3s;
+        }
+
+        .active > .menu-header .chevron {
+            transform: rotate(45deg);
+        }
+
+        /* Konten Dropdown (Nested) */
+        .submenu {
+            max-height: 0;
+            overflow: hidden;
+            background-color: #ffffff;
+            transition: max-height 0.3s ease-out;
+        }
+
+        /* Memberikan indentasi/jarak ke dalam untuk tiap level */
+        .submenu .menu-header, .submenu .direct-link {
+            padding-left: 40px; 
+            font-size: 0.95rem;
+            background-color: #fafafa;
+        }
+
+        /* Sub-sub menu lebih dalam lagi */
+        .submenu .submenu .menu-header, .submenu .submenu .direct-link {
+            padding-left: 60px;
+            font-size: 0.9rem;
+            background-color: #f5f5f5;
+        }
+
+        /* Gaya untuk link terakhir (bukan dropdown) */
+        .direct-link {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: var(--primary);
+            transition: all 0.2s;
+        }
+
+        .direct-link:hover {
+            background-color: #eef7fe;
+            padding-left: 25px;
+        }
+
+        footer {
+            margin-top: auto;
+            padding-bottom: 30px;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Repository</h1>
+        <p>Struktur Navigasi Multi-Level</p>
+    </header>
+
+    <div class="nav-container">
+        
+        <div class="menu-item">
+            <div class="menu-header" onclick="toggleMenu(this)">
+                <div class="title">📁 Kelas 10 SMA</div>
+                <div class="chevron"></div>
+            </div>
+            <div class="submenu">
+                
+                <div class="menu-item">
+                    <div class="menu-header" onclick="toggleMenu(this)">
+                        <div class="title">📂 Semester 1</div>
+                        <div class="chevron"></div>
+                    </div>
+                    <div class="submenu">
+                        <a href="proyek/web/html/index.html" class="direct-link">📄 Belajar HTML</a>
+                        <a href="proyek/web/css/index.html" class="direct-link">📄 Belajar CSS</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-header" onclick="toggleMenu(this)">
+                        <div class="title">📂 Semester 2</div>
+                        <div class="chevron"></div>
+                    </div>
+                    <div class="submenu">
+                        <a href="proyek/api/node/index.html" class="direct-link">📄 Paket 1 - Analisis Data</a>
+                        <a href="proyek/api/php/index.html" class="direct-link">📄 Paket 2 - Algoritma dan Pemrograman 1</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <a href="https://github.com/username" class="direct-link" style="color: #333; font-weight: 500;">
+                🔗 Lihat Profil GitHub
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Repository Nav - Mobile Friendly
+    </footer>
+
+    <script>
+        function toggleMenu(element) {
+            const parent = element.parentElement;
+            const submenu = element.nextElementSibling;
+            
+            // Toggle class active untuk memutar panah
+            parent.classList.toggle('active');
+
+            if (submenu.style.maxHeight && submenu.style.maxHeight !== "0px") {
+                submenu.style.maxHeight = "0px";
+            } else {
+                // Kalkulasi tinggi total termasuk semua anak yang terbuka
+                submenu.style.maxHeight = submenu.scrollHeight + "px";
+                
+                // Jika ini adalah nested menu, kita perlu mengupdate tinggi parent-nya juga
+                let parentSubmenu = parent.closest('.submenu');
+                while (parentSubmenu) {
+                    parentSubmenu.style.maxHeight = (parentSubmenu.scrollHeight + submenu.scrollHeight) + "px";
+                    parentSubmenu = parentSubmenu.parentElement.closest('.submenu');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
