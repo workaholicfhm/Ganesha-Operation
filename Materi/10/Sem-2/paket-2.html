@@ -7,15 +7,97 @@
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({ startOnLoad: true });</script>
 <style>
-body { font-family: Arial, sans-serif; line-height: 1.6; padding: 24px; }
-h1,h2,h3,h4 { margin-top: 1.2em; }
-pre { background:#f4f4f4; padding:12px; border-radius:6px; }
-table { border-collapse: collapse; width:100%; margin:16px 0; }
-th,td { border:1px solid #333; padding:8px; }
-ul { margin-top:6px; }
+:root {
+    --primary-color: #3498db;
+    --bg-code: #282c34;
+    --text-main: #333;
+}
+
+body { 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    line-height: 1.7; 
+    color: var(--text-main);
+    max-width: 900px; /* Membatasi lebar agar tidak melelahkan mata di laptop */
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #fdfdfd;
+}
+
+/* Membuat Heading lebih tegas */
+h1 { border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; color: #2c3e50; }
+h2 { color: #2980b9; margin-top: 2em; border-left: 5px solid var(--primary-color); padding-left: 15px; }
+h3 { color: #16a085; }
+
+pre { 
+    background: var(--bg-code); 
+    color: #abb2bf; 
+    padding: 15px; 
+    border-radius: 8px; 
+    overflow-x: auto; /* Agar tidak hancur di layar HP */
+    box-shadow: inset 0 1px 10px rgba(0,0,0,0.3);
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+
+code {
+    font-family: 'Consolas', monospace;
+    background: #eee;
+    padding: 2px 5px;
+    border-radius: 4px;
+    color: #e74c3c;
+}
+
+pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+}
+
+.table-container { overflow-x: auto; } /* Bungkus tabel dengan div ini di HTML */
+
+table { 
+    border-collapse: collapse; 
+    width: 100%; 
+    margin: 20px 0; 
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+th { background-color: var(--primary-color); color: white; text-align: left; }
+th, td { padding: 12px 15px; border: 1px solid #eee; }
+tr:nth-child(even) { background-color: #f8f9fa; }
+tr:hover { background-color: #f1f7fe; }
+
+.mermaid {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+blockquote {
+    margin: 20px 0;
+    padding: 15px 20px;
+    background-color: #e7f3fe;
+    border-left: 5px solid #2196F3;
+    color: #0c5460;
+}
+
+footer {
+    margin-top: auto;
+    padding-bottom: 30px;
+    font-size: 0.8rem;
+    color: #aaa;
+}
 </style>
 </head>
 <body>
+    
+<a href="../../../index.html" style="text-decoration: none; color: #3498db; font-weight: bold;">&larr; Kembali ke Daftar Materi</a>
 
 <h1>Algoritma dan Pemrograman 1</h1>
 
@@ -215,5 +297,8 @@ flowchart TB
 <tr><td>\'</td><td>tanda kutip</td></tr>
 </table>
 
+<footer>
+    &copy; 2026 Muhammad Fahmi - Catatan Pengajar
+</footer>
 </body>
 </html>
