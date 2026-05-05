@@ -26,22 +26,21 @@ h2 { color: #2980b9; margin-top: 2em; border-left: 5px solid var(--primary-color
 h3 { color: #16a085; }
 h4 { color: #2c3e50; margin-bottom: 10px; }
 
-pre { 
-    background: var(--bg-code); 
-    color: #abb2bf; 
-    padding: 15px; 
-    border-radius: 8px; 
-    overflow-x: auto; 
-    box-shadow: inset 0 1px 10px rgba(0,0,0,0.3);
-    font-family: 'Consolas', 'Monaco', monospace;
-}
-
 code {
     font-family: 'Consolas', monospace;
     background: #eee;
     padding: 2px 5px;
     border-radius: 4px;
     color: #e74c3c;
+}
+
+pre { 
+    background: var(--bg-code); 
+    color: #abb2bf; 
+    padding: 15px; 
+    border-radius: 8px; 
+    overflow-x: auto; 
+    font-family: 'Consolas', monospace;
 }
 
 .table-container { overflow-x: auto; }
@@ -85,14 +84,11 @@ footer {
 <h1>Paket II Algoritma Pemrograman dan Dampak Sosialnya</h1>
 
 <h2>2.1 Penjelasan</h2>
-
-<p>Algoritma adalah urutan langkah yang dibuat untuk menyelesaikan permasalahan atau tugas tertentu. Urutan penyelesaian masalahnya diimplementasikan pada kegiatan pemrograman.</p>
-
-<p>Pemrograman adalah proses mengembangkan program, perangkat lunak, aplikasi, dan situs web. Bahasa pemrograman adalah instruksi standar untuk memerintahkan komputer dalam menjalankan fungsi tertentu.</p>
+<p><strong>Algoritma</strong> adalah urutan langkah yang dibuat untuk menyelesaikan permasalahan atau tugas tertentu. Urutan penyelesaian masalahnya diimplementasikan pada kegiatan <strong>pemrograman</strong>.</p>
+<p><strong>Pemrograman</strong> adalah proses mengembangkan program, perangkat lunak, aplikasi, dan situs web. <strong>Bahasa pemrograman</strong> adalah instruksi standar untuk memerintahkan komputer dalam menjalankan fungsi tertentu.</p>
 
 <h3>2.1.2 Program Scratch</h3>
-<p>Scratch adalah bahasa pemrograman berbasis visual interaktif yang mudah dan menyenangkan. Dengan Scratch cukup <code>drag and drop</code> blok kode, tidak perlu mengetik kode.</p>
-
+<p><strong>Scratch</strong> adalah bahasa pemrograman berbasis visual interaktif yang mudah dan menyenangkan. Dengan Scratch cukup <code>drag and drop</code> blok kode, tidak perlu mengetik kode.</p>
 <ul>
     <li>Berbasis web dan desktop, di <a href="https://scratch.mit.edu">https://scratch.mit.edu</a></li>
     <li><strong>Sprite</strong> adalah gambar atau objek yang bisa diprogram, berisi blok-blok perintah yang dirancang tampil interaktif.</li>
@@ -100,118 +96,98 @@ footer {
 </ul>
 
 <h4>2.1.2.1 Bagian Tampilan Scratch</h4>
+<ol>
+    <li><strong>Menu</strong>
+        <ul>
+            <li>Membuat proyek baru</li>
+            <li>Membuka proyek yang tersimpan</li>
+            <li>Mengganti bahasa</li>
+            <li>Tutorial</li>
+        </ul>
+    </li>
+    <li><strong>Scripts</strong><br>Sekumpulan blok-blok perintah yang akan digunakan untuk memprogram, setiap blok kode memiliki fungsi yang berbeda.</li>
+    <li><strong>Script Area</strong><br>Tempat untuk menerapkan script pada sprite.</li>
+    <li><strong>Canvas</strong><br>Tempat sprite menjalankan script.
+        <ul>
+            <li>Bendera hijau untuk menjalankan program</li>
+            <li>Lingkaran merah untuk menghentikan program</li>
+        </ul>
+    </li>
+    <li><strong>Sprite List</strong><br>Untuk mengatur dan mengganti tampilan sprite, akan berisikan blok-blok perintah, ada "new sprite" untuk menambahkan sprite.</li>
+    <li><strong>Stage atau Backdrop</strong><br>Gambar latar belakang pada canvas, bisa diganti di bagian "Stage".</li>
+</ol>
+
+<h4>2.1.2.2 Deskripsi dan Fungsi Ikon pada Bagian Script/Deskripsi Blok</h4>
 <div class="table-container">
     <table>
-        <tr>
-            <th>Bagian</th>
-            <th>Fungsi / Deskripsi</th>
-        </tr>
-        <tr>
-            <td><strong>Menu</strong></td>
-            <td>Membuat proyek baru, membuka proyek, mengganti bahasa, dan tutorial.</td>
-        </tr>
-        <tr>
-            <td><strong>Scripts</strong></td>
-            <td>Sekumpulan blok-blok perintah yang akan digunakan untuk memprogram.</td>
-        </tr>
-        <tr>
-            <td><strong>Script Area</strong></td>
-            <td>Tempat untuk menerapkan script pada sprite.</td>
-        </tr>
-        <tr>
-            <td><strong>Canvas</strong></td>
-            <td>Tempat sprite menjalankan script (Bendera hijau = Run, Lingkaran merah = Stop).</td>
-        </tr>
-        <tr>
-            <td><strong>Sprite List</strong></td>
-            <td>Mengatur/mengganti tampilan sprite dan menambah sprite baru.</td>
-        </tr>
-        <tr>
-            <td><strong>Stage / Backdrop</strong></td>
-            <td>Gambar latar belakang pada canvas.</td>
-        </tr>
+        <tr><th>No</th><th>Ikon/Blok</th><th>Fungsi</th></tr>
+        <tr><td>1</td><td><strong>Motion</strong></td><td>Mengontrol penempatan, arah, perputaran, dan perpindahan sprite.</td></tr>
+        <tr><td>2</td><td><strong>Looks</strong></td><td>Mengenai sprite, tampilan background, menampilkan teks.</td></tr>
+        <tr><td>3</td><td><strong>Sound</strong></td><td>Mengontrol playback, volume musik, dan file audio.</td></tr>
+        <tr><td>4</td><td><strong>Pen</strong></td><td>Menggambar dengan menggunakan warna dan ukuran pena yang berbeda.</td></tr>
+        <tr><td>5</td><td><strong>Control</strong></td><td>Menggerakkan eksekusi script berdasarkan perihal yang didefinisikan sebelumnya, pengulangan dengan <i>loops</i>, serta menampilkan logika kondisional.</td></tr>
+        <tr><td>6</td><td><strong>Sensing</strong></td><td>Menentukan lokasi dari pointer mouse, jarak, dan apakah sprite bersentuhan dengan sprite lain.</td></tr>
+        <tr><td>7</td><td><strong>Numbers</strong></td><td>Menampilkan perbandingan logika, pembulatan, dan operasi matematika.</td></tr>
+        <tr><td>8</td><td><strong>Variables</strong></td><td>Membuat variabel dan menaruh data pada aplikasi ketika dieksekusi.</td></tr>
     </table>
 </div>
 
-<h4>2.1.2.2 Deskripsi Blok Script</h4>
-<ul>
-    <li><strong>Motion:</strong> mengontrol penempatan, arah, dan perpindahan sprite.</li>
-    <li><strong>Looks:</strong> tampilan sprite, background, dan menampilkan teks.</li>
-    <li><strong>Sound:</strong> mengontrol playback, volume musik, dan file audio.</li>
-    <li><strong>Pen:</strong> menggambar dengan warna dan ukuran pena berbeda.</li>
-    <li><strong>Control:</strong> eksekusi script, pengulangan (loop), dan logika kondisional.</li>
-    <li><strong>Sensing:</strong> menentukan lokasi pointer mouse dan sensor sentuhan.</li>
-    <li><strong>Numbers:</strong> perbandingan logika dan operasi matematika.</li>
-    <li><strong>Variables:</strong> membuat variabel dan menyimpan data.</li>
-</ul>
-
-<hr>
-
 <h3>2.1.3 Perbedaan TI dan TIK</h3>
-<blockquote>
-    <strong>Teknologi Informasi (TI):</strong> Teknologi komputer untuk menyimpan, mengambil, dan mentransmisikan data.<br>
-    <strong>Teknologi Informasi dan Komunikasi (TIK):</strong> TI yang ditambahkan peralatan komunikasi sehingga transmisi informasi tanpa batasan ruang dan waktu.
-</blockquote>
+<p><strong>Teknologi Informasi (TI)</strong> adalah teknologi yang menggunakan komputer untuk menyimpan, mengambil, dan mentransmisikan data atau informasi.</p>
+<p><strong>Teknologi Informasi dan Komunikasi (TIK)</strong> adalah TI yang telah ditambahkan peralatan komunikasi, sehingga pengguna dapat berkomunikasi dan mentransmisikan informasi tanpa batasan ruang dan waktu.</p>
 
 <h3>2.1.4 Pengaruh TIK pada Kehidupan Sosial</h3>
+<p>Meningkatkan aktivitas dan efisiensi komunikasi serta memungkinkan pengelolaan informasi menggunakan banyak media komunikasi.</p>
 
-<h4>a. Aktivitas Keseharian</h4>
-<p>Belanja di <code>e-commerce</code> (Shopee, Tokped) dan pembayaran melalui <code>e-payment</code> (e-banking, e-wallet).</p>
-
-<h4>b. Pendidikan</h4>
-<p><strong>E-learning:</strong> Pembelajaran elektronik menggunakan video conference, e-book, dan materi digital.</p>
-
-<h4>c. Kesehatan</h4>
-<p><strong>Telemedicine:</strong> Konsultasi dokter secara virtual, resep online, dan obat dikirim langsung ke alamat.</p>
-
-<h4>d. Perdagangan</h4>
-<p>Barang Fisik (membutuhkan transportasi) vs Barang Non-fisik (pulsa, e-book).</p>
+<ul>
+    <li><strong>a. Aktivitas Keseharian:</strong> Belanja di E-Commerce (Shopee, Tokped, dll) dan pembayaran dengan E-Payment (E-Banking, Mobile Banking, E-Wallet).</li>
+    <li><strong>b. Pendidikan:</strong> <strong>E-Learning</strong> (pembelajaran elektronik) dilakukan dengan video conference, materi video, e-books, dan file digital.</li>
+    <li><strong>c. Kesehatan:</strong> <strong>Telemedicine</strong> memungkinkan konsultasi virtual dengan dokter, resep online, obat dikirim ke alamat, dan pembayaran online.</li>
+    <li><strong>d. Perdagangan:</strong> Tersedia barang fisik (dengan transportasi) dan non-fisik (pulsa, e-book, dll).</li>
+    <li><strong>e. Pekerjaan:</strong> Pekerjaan yang bisa dilakukan di rumah, contohnya sales yang berkoordinasi dengan distributor dan pelanggan.</li>
+</ul>
 
 <h3>2.1.5 Dampak Teknologi Informasi dan Komunikasi</h3>
 
-<div class="table-container">
-    <table>
-        <tr>
-            <th>Dampak Positif</th>
-            <th>Dampak Negatif</th>
-        </tr>
-        <tr>
-            <td>Pengelolaan jadwal harian & IoT</td>
-            <td>Penyebaran hoaks (berita bohong)</td>
-        </tr>
-        <tr>
-            <td>Komunikasi cepat (Medsos, G-mail)</td>
-            <td>Kecanduan internet & game</td>
-        </tr>
-        <tr>
-            <td>Pencarian informasi (Google, Wikipedia)</td>
-            <td>Cyberbullying</td>
-        </tr>
-        <tr>
-            <td>Lingkungan tanpa kertas (Paperless)</td>
-            <td>Berkurangnya aktivitas fisik & sosial</td>
-        </tr>
-        <tr>
-            <td>Pengembangan kecakapan hidup</td>
-            <td>Potensi kejahatan siber & kehilangan pekerjaan</td>
-        </tr>
-    </table>
-</div>
+<h4>A. Dampak Positif</h4>
+<ol>
+    <li><strong>Pengelolaan kegiatan keseharian:</strong> Jadwal online, pembayaran tagihan otomatis, dan kontrol rumah via IoT.</li>
+    <li><strong>Komunikasi dan Hubungan Sosial:</strong> Komunikasi cepat via Gmail, Chat, Sosial Media, dan tatap muka virtual (Zoom, G-Meet).</li>
+    <li><strong>Pencarian dan Berbagi Informasi:</strong> Melalui Search Engine seperti Google dan Wikipedia.</li>
+    <li><strong>Hiburan:</strong> Bermain games, memutar lagu, dan menonton video.</li>
+    <li><strong>Pendidikan:</strong> Video conference, e-book, serta simulasi/Virtual Reality.</li>
+    <li><strong>Lingkungan tanpa kertas:</strong> Penurunan penggunaan kertas membantu menjaga alam (mengurangi penebangan pohon).</li>
+    <li><strong>Pengembangan kecakapan hidup:</strong> Melalui tutorial di sosial media dan kemudahan berbagi informasi.</li>
+</ol>
+
+<h4>B. Dampak Negatif</h4>
+<ol>
+    <li><strong>Penyebaran berita bohong:</strong> Mudah menyebarkan hoaks; penting untuk mengecek kebenaran berita.</li>
+    <li><strong>Kecanduan internet dan game:</strong> Gangguan sosialisasi serta kesehatan fisik/mental (mata, leher, kelelahan).</li>
+    <li><strong>Cyberbullying:</strong> Kekerasan dan ejekan online yang bisa memicu depresi.</li>
+    <li><strong>Berkurangnya aktivitas sosial:</strong> Mempengaruhi kualitas hubungan sosial nyata.</li>
+    <li><strong>Berkurangnya aktivitas fisik:</strong> Menyebabkan gangguan kesehatan dan kegemukan.</li>
+    <li><strong>Potensi kehilangan pekerjaan:</strong> Otomatisasi menggantikan peran manusia (meski muncul pekerjaan baru).</li>
+    <li><strong>Potensi korban kejahatan:</strong> Pencurian data pribadi, virus, dan malware.</li>
+</ol>
+
+<h3>2.1.6 Kolaborasi di Dunia Maya</h3>
+<p>Kerja bersama orang yang berbeda tempat dan waktu dalam menyelesaikan tugas menggunakan TIK.</p>
+
+<h3>2.1.7 Media Sosial</h3>
+<p>Media interaktif untuk berkreasi, menuliskan ide, dan membagikan informasi dalam komunitas virtual. Contoh: Facebook, YouTube, WhatsApp, TikTok, Instagram, X, Telegram, Threads, dll.</p>
 
 <h3>2.1.8 Informasi Pribadi dan Hukum Privasi</h3>
-<p>Informasi dibagi menjadi dua jenis:</p>
-<ul>
-    <li><strong>Informasi Personal:</strong> Tidak dapat digunakan mengidentifikasi seseorang secara langsung.</li>
-    <li><strong>Informasi Privat (Sensitif):</strong> Dapat mengidentifikasi seseorang (KTP, SIM, Akun Surel).</li>
-</ul>
+<blockquote>
+    <strong>Informasi Personal:</strong> Tidak dapat digunakan untuk mengidentifikasi seseorang secara langsung.<br>
+    <strong>Informasi Privat (Sensitif):</strong> Dapat digunakan untuk mengidentifikasi seseorang (Surel, nomor telepon, KTP, SIM, foto).
+</blockquote>
 
-<h4>Hukum Privasi</h4>
-<p>Merujuk pada pengelolaan dan perlindungan informasi pribadi. Tiga aspek utama:</p>
-<ol>
-    <li>Kebebasan dari gangguan.</li>
-    <li>Kendali atas informasi diri sendiri.</li>
-    <li>Bebas dari pengawasan.</li>
-</ol>
+<h4>1. Hukum Privasi</h4>
+<p>Merujuk pada pengelolaan, penyimpanan, dan penggunaan informasi pribadi. Aspek yang dijaga: (a) kebebasan dari gangguan, (b) kendali informasi diri, (c) bebas dari pengawasan.</p>
+
+<h4>2. Persetujuan yang Diinformasikan</h4>
+<p>Lembaga yang menyimpan data pribadi memiliki tanggung jawab etis dan hukum untuk melindungi data dari penyalahgunaan dan pengumpulan informasi tanpa sepengetahuan pemilik.</p>
 
 <footer>
     &copy; 2026 Muhammad Fahmi - Catatan Pengajar
