@@ -1,1 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Algoritma Pemrograman dan Dampak Sosialnya</title>
+<style>
+:root {
+    --primary-color: #3498db;
+    --bg-code: #282c34;
+    --text-main: #333;
+}
 
+body { 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    line-height: 1.7; 
+    color: var(--text-main);
+    max-width: 900px; 
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #fdfdfd;
+}
+
+h1 { border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; color: #2c3e50; }
+h2 { color: #2980b9; margin-top: 2em; border-left: 5px solid var(--primary-color); padding-left: 15px; }
+h3 { color: #16a085; }
+h4 { color: #2c3e50; margin-bottom: 10px; }
+
+pre { 
+    background: var(--bg-code); 
+    color: #abb2bf; 
+    padding: 15px; 
+    border-radius: 8px; 
+    overflow-x: auto; 
+    box-shadow: inset 0 1px 10px rgba(0,0,0,0.3);
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+
+code {
+    font-family: 'Consolas', monospace;
+    background: #eee;
+    padding: 2px 5px;
+    border-radius: 4px;
+    color: #e74c3c;
+}
+
+.table-container { overflow-x: auto; }
+
+table { 
+    border-collapse: collapse; 
+    width: 100%; 
+    margin: 20px 0; 
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+th { background-color: var(--primary-color); color: white; text-align: left; }
+th, td { padding: 12px 15px; border: 1px solid #eee; }
+tr:nth-child(even) { background-color: #f8f9fa; }
+tr:hover { background-color: #f1f7fe; }
+
+blockquote {
+    margin: 20px 0;
+    padding: 15px 20px;
+    background-color: #e7f3fe;
+    border-left: 5px solid #2196F3;
+    color: #0c5460;
+}
+
+footer {
+    margin-top: 50px;
+    padding-bottom: 30px;
+    font-size: 0.8rem;
+    color: #aaa;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+</style>
+</head>
+<body>
+<a href="../../../index.html" style="text-decoration: none; color: #3498db; font-weight: bold;">&larr; Kembali ke Daftar Materi</a>
+
+<h1>Paket II Algoritma Pemrograman dan Dampak Sosialnya</h1>
+
+<h2>2.1 Penjelasan</h2>
+
+<p>Algoritma adalah urutan langkah yang dibuat untuk menyelesaikan permasalahan atau tugas tertentu. Urutan penyelesaian masalahnya diimplementasikan pada kegiatan pemrograman.</p>
+
+<p>Pemrograman adalah proses mengembangkan program, perangkat lunak, aplikasi, dan situs web. Bahasa pemrograman adalah instruksi standar untuk memerintahkan komputer dalam menjalankan fungsi tertentu.</p>
+
+<h3>2.1.2 Program Scratch</h3>
+<p>Scratch adalah bahasa pemrograman berbasis visual interaktif yang mudah dan menyenangkan. Dengan Scratch cukup <code>drag and drop</code> blok kode, tidak perlu mengetik kode.</p>
+
+<ul>
+    <li>Berbasis web dan desktop, di <a href="https://scratch.mit.edu">https://scratch.mit.edu</a></li>
+    <li><strong>Sprite</strong> adalah gambar atau objek yang bisa diprogram, berisi blok-blok perintah yang dirancang tampil interaktif.</li>
+    <li>Defaultnya adalah kucing oranye, bisa diganti.</li>
+</ul>
+
+<h4>2.1.2.1 Bagian Tampilan Scratch</h4>
+<div class="table-container">
+    <table>
+        <tr>
+            <th>Bagian</th>
+            <th>Fungsi / Deskripsi</th>
+        </tr>
+        <tr>
+            <td><strong>Menu</strong></td>
+            <td>Membuat proyek baru, membuka proyek, mengganti bahasa, dan tutorial.</td>
+        </tr>
+        <tr>
+            <td><strong>Scripts</strong></td>
+            <td>Sekumpulan blok-blok perintah yang akan digunakan untuk memprogram.</td>
+        </tr>
+        <tr>
+            <td><strong>Script Area</strong></td>
+            <td>Tempat untuk menerapkan script pada sprite.</td>
+        </tr>
+        <tr>
+            <td><strong>Canvas</strong></td>
+            <td>Tempat sprite menjalankan script (Bendera hijau = Run, Lingkaran merah = Stop).</td>
+        </tr>
+        <tr>
+            <td><strong>Sprite List</strong></td>
+            <td>Mengatur/mengganti tampilan sprite dan menambah sprite baru.</td>
+        </tr>
+        <tr>
+            <td><strong>Stage / Backdrop</strong></td>
+            <td>Gambar latar belakang pada canvas.</td>
+        </tr>
+    </table>
+</div>
+
+<h4>2.1.2.2 Deskripsi Blok Script</h4>
+<ul>
+    <li><strong>Motion:</strong> mengontrol penempatan, arah, dan perpindahan sprite.</li>
+    <li><strong>Looks:</strong> tampilan sprite, background, dan menampilkan teks.</li>
+    <li><strong>Sound:</strong> mengontrol playback, volume musik, dan file audio.</li>
+    <li><strong>Pen:</strong> menggambar dengan warna dan ukuran pena berbeda.</li>
+    <li><strong>Control:</strong> eksekusi script, pengulangan (loop), dan logika kondisional.</li>
+    <li><strong>Sensing:</strong> menentukan lokasi pointer mouse dan sensor sentuhan.</li>
+    <li><strong>Numbers:</strong> perbandingan logika dan operasi matematika.</li>
+    <li><strong>Variables:</strong> membuat variabel dan menyimpan data.</li>
+</ul>
+
+<hr>
+
+<h3>2.1.3 Perbedaan TI dan TIK</h3>
+<blockquote>
+    <strong>Teknologi Informasi (TI):</strong> Teknologi komputer untuk menyimpan, mengambil, dan mentransmisikan data.<br>
+    <strong>Teknologi Informasi dan Komunikasi (TIK):</strong> TI yang ditambahkan peralatan komunikasi sehingga transmisi informasi tanpa batasan ruang dan waktu.
+</blockquote>
+
+<h3>2.1.4 Pengaruh TIK pada Kehidupan Sosial</h3>
+
+<h4>a. Aktivitas Keseharian</h4>
+<p>Belanja di <code>e-commerce</code> (Shopee, Tokped) dan pembayaran melalui <code>e-payment</code> (e-banking, e-wallet).</p>
+
+<h4>b. Pendidikan</h4>
+<p><strong>E-learning:</strong> Pembelajaran elektronik menggunakan video conference, e-book, dan materi digital.</p>
+
+<h4>c. Kesehatan</h4>
+<p><strong>Telemedicine:</strong> Konsultasi dokter secara virtual, resep online, dan obat dikirim langsung ke alamat.</p>
+
+<h4>d. Perdagangan</h4>
+<p>Barang Fisik (membutuhkan transportasi) vs Barang Non-fisik (pulsa, e-book).</p>
+
+<h3>2.1.5 Dampak Teknologi Informasi dan Komunikasi</h3>
+
+<div class="table-container">
+    <table>
+        <tr>
+            <th>Dampak Positif</th>
+            <th>Dampak Negatif</th>
+        </tr>
+        <tr>
+            <td>Pengelolaan jadwal harian & IoT</td>
+            <td>Penyebaran hoaks (berita bohong)</td>
+        </tr>
+        <tr>
+            <td>Komunikasi cepat (Medsos, G-mail)</td>
+            <td>Kecanduan internet & game</td>
+        </tr>
+        <tr>
+            <td>Pencarian informasi (Google, Wikipedia)</td>
+            <td>Cyberbullying</td>
+        </tr>
+        <tr>
+            <td>Lingkungan tanpa kertas (Paperless)</td>
+            <td>Berkurangnya aktivitas fisik & sosial</td>
+        </tr>
+        <tr>
+            <td>Pengembangan kecakapan hidup</td>
+            <td>Potensi kejahatan siber & kehilangan pekerjaan</td>
+        </tr>
+    </table>
+</div>
+
+<h3>2.1.8 Informasi Pribadi dan Hukum Privasi</h3>
+<p>Informasi dibagi menjadi dua jenis:</p>
+<ul>
+    <li><strong>Informasi Personal:</strong> Tidak dapat digunakan mengidentifikasi seseorang secara langsung.</li>
+    <li><strong>Informasi Privat (Sensitif):</strong> Dapat mengidentifikasi seseorang (KTP, SIM, Akun Surel).</li>
+</ul>
+
+<h4>Hukum Privasi</h4>
+<p>Merujuk pada pengelolaan dan perlindungan informasi pribadi. Tiga aspek utama:</p>
+<ol>
+    <li>Kebebasan dari gangguan.</li>
+    <li>Kendali atas informasi diri sendiri.</li>
+    <li>Bebas dari pengawasan.</li>
+</ol>
+
+<footer>
+    &copy; 2026 Muhammad Fahmi - Catatan Pengajar
+</footer>
+</body>
+</html>
