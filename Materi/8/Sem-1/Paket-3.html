@@ -1,1 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bab 3 Algoritma dan Pemrograman</title>
+<style>
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #16a085;
+    --bg-code: #282c34;
+    --text-main: #333;
+    --accent-blue: #e7f3fe;
+}
 
+body { 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    line-height: 1.8; 
+    color: var(--text-main);
+    max-width: 900px; 
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #fdfdfd;
+}
+
+h1 { border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; color: #2c3e50; font-size: 2.2rem; }
+h2 { color: #2980b9; margin-top: 2.5em; border-left: 5px solid var(--primary-color); padding-left: 15px; background: #f8f9fa; padding-top: 5px; padding-bottom: 5px; }
+h3 { color: var(--secondary-color); margin-top: 1.8em; border-bottom: 1px dashed #ccc; padding-bottom: 5px; }
+
+ul, ol { margin-bottom: 20px; }
+li { margin-bottom: 8px; }
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    margin: 20px 0;
+}
+
+code {
+    font-family: 'Consolas', monospace;
+    background: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #e74c3c;
+}
+
+blockquote {
+    margin: 25px 0;
+    padding: 15px 25px;
+    background-color: var(--accent-blue);
+    border-left: 5px solid #2196F3;
+    color: #0c5460;
+    border-radius: 0 8px 8px 0;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 20px 0;
+    font-size: 0.85rem;
+    color: #999;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.arrow-list { list-style: none; padding-left: 0; }
+.arrow-list li::before { content: "→ "; color: var(--primary-color); font-weight: bold; }
+</style>
+</head>
+<body>
+<a href="../../../index.html" style="text-decoration: none; color: #3498db; font-weight: bold;">&larr; Kembali ke Daftar Materi</a>
+
+<h1>Bab 3 Algoritma dan Pemrograman</h1>
+
+<p>Tujuannya adalah untuk merancang penyelesaian masalah yang melibatkan literasi numerasi dan bagaimana menuliskan sekumpulan instruksi dengan menggunakan kumpulan kosakata yang terbatas atau simbol dalam format pseudocode</p>
+
+<section class="card">
+    <h2>A. Literasi Numerasi</h2>
+
+    <p>Menyajikan informasi dalam bentuk grafik, tabel, dan bagan</p>
+
+    <p>bermanfaat untuk menyelesaikan masalah secara praktis dalam kehidupan sehari-hari, memprediksi sesuatu, membantu proses pengambilan keputusan</p>
+
+    <p>contoh pendekatan matematika dan literasi numerasi</p>
+
+    <ul>
+        <li>peserta karya wisata = 40</li>
+        <li>kapasitas kendaraan = 12</li>
+    </ul>
+
+    <h3>1. dengan matematika</h3>
+    <p>40 / 12 = 3,3</p>
+    <p>5 kebawah dibulatkan 0. 5 keatas dibulatkan keatas</p>
+    <p>maka dibutuhkan 3 kendaraan</p>
+
+    <h3>2. literasi numerasi</h3>
+    <p>sama seperti matematika</p>
+    <p>3 x 12 = 36 orang</p>
+    <p>sisa 4 orang tanpa kendaraan</p>
+    <p>maka butuh 3 kendaraan untuk 36 orang, dan 1 kendaraan untuk 4 orang</p>
+</section>
+
+<section class="card">
+    <h2>B. Eksplorasi lanjutan scratch</h2>
+
+    <h3>1. kode control, input, variable</h3>
+    <p>control mengatur jalannya program, seperti perulangan dan kondisi</p>
+    <p>input digunakan untuk meminta masukan dari pengguna untuk dimasukkan dalam variable</p>
+    <p>variable adalah nama yang digunakan untuk menyimpan sebuah nilai</p>
+
+    <h3>2. kode custom block</h3>
+    <p>blok kode yang dapat dibuat sendiri dan disesuaikan fungsinya</p>
+</section>
+
+<section class="card">
+    <h2>C. Pengantar blockly games dan eksplorasi puzzle maze</h2>
+
+    <p>custom block pada blockly adalah tools yang dapat membantu membuat program sederhana dengan menggunakan blok-blok, seperti scratch</p>
+
+    <p>blockly bisa diubah jadi bahasa pemrograman JavaScript, PHP, Python</p>
+
+    <h3>Deskripsi Menu pada Blockly</h3>
+
+    <ol>
+        <li><strong>puzzle</strong>
+            <p>menyusun blok-blok yang berisi keterangan dan foto hewan ke blok hewan yang sesuai</p>
+        </li>
+        <li><strong>Maze</strong>
+            <p>menggerakkan sprite agar sampai ke tujuan</p>
+        </li>
+        <li><strong>Bird</strong>
+            <p>menggerakkan bird agar dapat mengambil cacing dan sampai ke sarangnya</p>
+        </li>
+        <li><strong>turtle</strong>
+            <p>menggerakkan turtle untuk menggambar sesuai pola yang disediakan</p>
+        </li>
+        <li><strong>movie</strong>
+            <p>membuat sprite sederhana dan menggerakkannya sesuai instruksi</p>
+        </li>
+        <li><strong>music</strong>
+            <p>membuat musik sederhana berdasarkan not balok yang diberikan</p>
+        </li>
+        <li><strong>pond tutor</strong>
+            <p>menggerakkan sprite agar menembaki sprite target hingga darahnya habis</p>
+        </li>
+        <li><strong>pond</strong>
+            <p>lanjutan dari permainan pond tutor</p>
+        </li>
+    </ol>
+</section>
+
+<section class="card">
+    <h2>D. Pengenalan Pemrograman Prosedural</h2>
+
+    <p>menuliskan sebuah program komputer</p>
+
+    <ol>
+        <li>menerima input, disimpan dalam variable, mengambil isinya dengan menyebutkan nama variable</li>
+        <li>mengeluarkan output dengan perintah "print", "write", "display" untuk menampilkan nilai variable</li>
+        <li>melakukan perhitungan aritmatika dan logika [kali, bagi, tambah, kurang, modulus, and, or, not, &gt;, &lt;, =]</li>
+    </ol>
+
+    <h3>Program ganjil genap</h3>
+    <ol>
+        <li>baca bilangan N</li>
+        <li>hitung K = sisa pembagian N dengan 2</li>
+        <li>bandingkan k dengan 0</li>
+        <li>jika k = 0 maka genap, jika tidak berarti ganjil</li>
+    </ol>
+
+    <h3>Program loop 1+2+3+..+N</h3>
+    <ol>
+        <li>Baca N</li>
+        <li>Sum = 0; i = 0</li>
+        <li>Ulangi Sum = Sum+i sampai i=N</li>
+        <li>Print Sum</li>
+    </ol>
+
+    <h3>1. Variable</h3>
+    <p>Variabel digunakan untuk menyimpan nilai</p>
+    <p>variabel harus memiliki nama dan berbeda dengan variabel yang lain</p>
+    <p>variabel harus mudah diingat</p>
+
+    <h3>2. Percabangan</h3>
+    <p>memeriksa nilai kebenaran melalui kondisi, dengan operasi perbandingan dan logika</p>
+    <ol>
+        <li><strong>sama dengan</strong> &rarr; memeriksa kesamaan dua nilai</li>
+        <li><strong>tidak sama dengan</strong> &rarr; memeriksa perbedaan dua nilai</li>
+        <li><strong>kurang dari</strong> &rarr; memeriksa apakah nilai lebih kecil dari nilai lainnya</li>
+        <li><strong>lebih dari</strong> &rarr; memeriksa apakah nilai lebih besar dari nilai lainnya</li>
+    </ol>
+
+    <h3>3. Pengulangan</h3>
+    <p>dalam komputer dikenal sebagai loop atau repetition</p>
+</section>
+
+<footer>
+    &copy; 2026 Muhammad Fahmi - Catatan Pengajar
+</footer>
+</body>
+</html>
