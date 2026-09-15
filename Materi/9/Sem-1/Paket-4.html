@@ -1,1 +1,637 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulasi PAS Informatika</title>
+<style>
+:root {
+    --primary-color: #3498db;
+    --bg-code: #282c34;
+    --text-main: #333;
+    --correct-bg: #e8f8f5;
+    --correct-border: #2ecc71;
+    --incorrect-bg: #fff8f5;
+    --incorrect-border: #fcd9c4;
+    --accent-blue: #e7f3fe;
+}
 
+body { 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    line-height: 1.6; 
+    color: var(--text-main);
+    max-width: 900px; 
+    margin: 0 auto;
+    padding: 30px 20px;
+    background-color: #f4f6f9;
+}
+
+.nav-link {
+    text-decoration: none; 
+    color: var(--primary-color); 
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+h1 { 
+    border-bottom: 2px solid var(--primary-color); 
+    padding-bottom: 10px; 
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.header-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.question-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    border: 1px solid #e1e8ed;
+}
+
+.question-number {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.options-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 15px 0;
+}
+
+.option-item {
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    background-color: #fff;
+}
+
+.option-item.correct {
+    background-color: var(--correct-bg);
+    border-color: var(--correct-border);
+}
+
+.option-item.incorrect {
+    background-color: var(--incorrect-bg);
+    border-color: var(--incorrect-border);
+}
+
+.option-text {
+    font-size: 1rem;
+}
+
+.badge-correct {
+    background-color: #2ecc71;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+.badge-incorrect {
+    background-color: #e67e22;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+/* Layout Kotak dan Warna Pembahasan */
+.sub-explanation {
+    margin-top: 8px;
+    padding: 10px 14px;
+    background-color: var(--accent-blue);
+    border-left: 4px solid #2196F3;
+    color: #0c5460;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.92rem;
+}
+
+.explanation-box {
+    margin-top: 15px;
+    padding: 15px 18px;
+    background-color: var(--accent-blue);
+    border-left: 5px solid #2196F3;
+    color: #0c5460;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.95rem;
+}
+
+.explanation-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #0c5460;
+    font-size: 1rem;
+}
+
+pre { 
+    background: var(--bg-code); 
+    color: #abb2bf; 
+    padding: 12px 15px; 
+    border-radius: 6px; 
+    overflow-x: auto; 
+    font-family: 'Consolas', monospace;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+footer {
+    margin-top: 40px;
+    padding-bottom: 30px;
+    font-size: 0.85rem;
+    color: #888;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<a href="../../../index.html" class="nav-link">&larr; Kembali ke Daftar Materi</a>
+
+<div class="header-box">
+    <h1>Simulasi PAS Informatika</h1>
+    <p style="margin-bottom: 0;">Lembar Soal Simulasi Penilaian Akhir Semester dilengkapi dengan kunci jawaban dan pembahasan.</p>
+</div>
+
+<!-- Soal 1 -->
+<div class="question-card">
+    <div class="question-number">1. Karakteristik utama dari struktur data Array?</div>
+    <ul class="options-list">
+        <li class="option-item incorrect">
+            <div class="option-text">a. ukuran dinamis <span class="badge-incorrect">Salah</span></div>
+            <div class="sub-explanation">&rarr; ukuran array sifatnya statis dan harus ditentukan sejak awal</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">b. dapat menyimpan elemen dengan tipe data berbeda <span class="badge-incorrect">Salah</span></div>
+            <div class="sub-explanation">&rarr; elemen dalam array harus homogen (tipe datanya sama)</div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">c. akses elemen menggunakan indeks <span class="badge-correct">Benar</span></div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">d. elemen disimpan dalam urutan tidak teratur <span class="badge-incorrect">Salah</span></div>
+            <div class="sub-explanation">&rarr; Array menyimpan elemen secara terurut dan berurutan</div>
+        </li>
+    </ul>
+</div>
+
+<!-- Soal 2 -->
+<div class="question-card">
+    <div class="question-number">2. apa yang membedakan queue dari stack</div>
+    <ul class="options-list">
+        <li class="option-item correct">
+            <div class="option-text">a. stack menggunakan LIFO, queue menggunakan FIFO <span class="badge-correct">Benar</span></div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">b. Queue lebih cepat dalam mengakses data <span class="badge-incorrect">Salah</span></div>
+            <div class="sub-explanation">&rarr; Kecepatan Akses data pada dasar struktur kedaunya relatif sama</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">c. stack lebih fleksibel dalam penyisipan data <span class="badge-incorrect">Salah</span></div>
+            <div class="sub-explanation">&rarr; Keduanya punya aturan yang ketat, Stack masuk dan keluar dari ujung/atas, queue masuk dari belakang dan keluar dari depan</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">d. queue hanya dapat menyimpan elemen bertipe data tunggal <span class="badge-incorrect">Salah</span></div>
+            <div class="sub-explanation">&rarr; Tergantung bahasa pemrograman dan implementasinya, bukan konsep dasarnya</div>
+        </li>
+    </ul>
+</div>
+
+<!-- Soal 3 -->
+<div class="question-card">
+    <div class="question-number">3. apa yang dimaksud denan konversi sistem bilangan</div>
+    <ul class="options-list">
+        <li class="option-item incorrect">
+            <div class="option-text">a. penggunakan sistem bilangan yang tepat untuk operasi matematika <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; definisi penerapan atau pemilihan sistem bilangan, bukan definisi</div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">b. perubahan angka dari satu sistem bilangan ke sistem bilangan yang lain <span class="badge-correct">Benar</span></div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">c. pemilihan simbol atau angka yang tepat untuk mereperesentasikan suatu bilangan <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; konsep penyimbolan atau representasi bilangan</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">d. perhitungan nilai bobot dari setiap digit bilangan <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; ini adalah cara meghitung nilai tempat</div>
+        </li>
+    </ul>
+</div>
+
+<!-- Soal 4 -->
+<div class="question-card">
+    <div class="question-number">4. berapa hasil konveksi hexadimal 2F ke biner?</div>
+    <ul class="options-list">
+        <li class="option-item incorrect">
+            <div class="option-text">a. 10110111</div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">b. 00101111 <span class="badge-correct">benar</span></div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">c. 10100111</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">d. 00111111</div>
+        </li>
+    </ul>
+    <div class="explanation-box">
+        <div class="explanation-title">Jawab</div>
+        <p>- Heksadimal adalah sistem bilangan berbasis 16 (0-9, A-F)<br>
+        - Biner adalah sistem bilangan berbasis 2<br>
+        - 1 digit hexadecimal = 4 digit biner</p>
+<pre>A = 10
+B = 11
+C = 12
+D = 13
+E = 14
+F = 15
+
+2F = 2 dan F (15)</pre>
+        <p>cari 2 dengan mengkalikan 0 atau 1 pada pola (8, 4, 2, 1)</p>
+        <p>8 -> 0<br>
+        4 -> 0<br>
+        2 -> 1<br>
+        1 -> 0</p>
+        <p>hasil = 0010</p>
+        <p>cari 15</p>
+        <p>8 -> 1<br>
+        4 -> 1<br>
+        2 -> 1<br>
+        1 -> 1</p>
+        <p>hasil = 1111</p>
+        <p>gabungkan = 00101111</p>
+    </div>
+</div>
+
+<!-- Soal 5 -->
+<div class="question-card">
+    <div class="question-number">5. menghapus elemen teratas dari sturktur data. mana yang tepat digunakan?</div>
+    <ul class="options-list">
+        <li class="option-item incorrect">
+            <div class="option-text">a. array <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; elemen diakses menggunakan indeks posisinya</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">b. linked list <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; bisa dihapus dari awal, tengah, akhir</div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">c. stack <span class="badge-correct">Benar</span></div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">d. queue <span class="badge-incorrect">Salah</span></div>
+        </li>
+    </ul>
+</div>
+
+<!-- Soal 6 -->
+<div class="question-card">
+    <div class="question-number">6. apa itu e-commerce CMS?</div>
+    <ul class="options-list">
+        <li class="option-item correct">
+            <div class="option-text">a. CMS khusus yang dirancang untuk mengelola e-commerce <span class="badge-correct">benar</span></div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">b. CMS yang menggunakan modularitas untuk memudahkan mengelola konten <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; Modular CMS</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">c. CMS berbasis cloud untuk mengelola konten dari mana saja dengan koneksi internet <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; Cloud CMS/SaaS CMS</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">d. CMS yang dikembangkan oleh perusahaan untuk dijual sebagai produk <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; Proprietary CMS/CMS Komersial</div>
+        </li>
+    </ul>
+</div>
+
+<!-- Soal 7 -->
+<div class="question-card">
+    <div class="question-number">7. contoh CMS khusus untuk membuat web toko online?</div>
+    <ul class="options-list">
+        <li class="option-item incorrect">
+            <div class="option-text">a. WordPress <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; CMS umum, bisa ditambah plugin, tapi fokus utamanya bukan e-commerce</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">b. Joomla <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; CMS serbaguna untuk berbagai jenis web</div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">c. shopify <span class="badge-correct">Benar</span></div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">d. drupal <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; CMS serbaguna, berfokus pada kemanan dan fleksibilitas tingkat lanjut</div>
+        </li>
+    </ul>
+</div>
+
+<!-- Soal 8 -->
+<div class="question-card">
+    <div class="question-number">8. apa manfaat integrasi wordpress dengan media sosial dan google analytics?</div>
+    <ul class="options-list">
+        <li class="option-item correct">
+            <div class="option-text">a. meningkatkan eksposour dan memantau performa blog <span class="badge-correct">benar</span></div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">b. meningkatkan keamanan dan backup data <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; keamanan dan backup dikelola oleh plugin atau server hosting</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">c. meningkatkan performa sistem operasi <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; integrasi ini bekerja di tingkat aplikasi web</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">d. meningkatakn fitur komentar dan kategori <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; fitur bawaan dasar</div>
+        </li>
+    </ul>
+</div>
+
+<!-- Soal 9 -->
+<div class="question-card">
+    <div class="question-number">9. apa yang dilakukan untuk mengevaluasi performa wordpress?</div>
+    <ul class="options-list">
+        <li class="option-item incorrect">
+            <div class="option-text">a. mengelola komentar <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; aktivitas interaksi dengan pembaca</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">b, menginstal plugin <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; menambah fungsi atau fitur baru</div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">c. memantau statistik blog <span class="badge-correct">benar</span></div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">d. memilih tema yang sesuai <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; bagian dari perancangan tampilan</div>
+        </li>
+    </ul>
+</div>
+
+<!-- Soal 10 -->
+<div class="question-card">
+    <div class="question-number">10. media penyimapana yang digunakan pada perangkat mobile?</div>
+    <ul class="options-list">
+        <li class="option-item incorrect">
+            <div class="option-text">a, Hard Disk Drive (HDD) <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; ukurannya besar, berat, dan perlu daya tinggi, dipakai pc/laptop</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">b. CD/DVD <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; media penyimpanan optic yang dibaca dengan optical drive, tidak muat di hp</div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">c. Memory Card <span class="badge-correct">benar</span></div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">D. Solid State Drive (SSD) <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; sama flash memory, tapi lebih besar dan ditujukan untuk laptop atau pc</div>
+        </li>
+    </ul>
+</div>
+
+<!-- Soal 11 -->
+<div class="question-card">
+    <div class="question-number">11. apa fungsi cache pada media penyimpanan fisik?</div>
+    <ul class="options-list">
+        <li class="option-item incorrect">
+            <div class="option-text">a. mengontrol dan mengelola data yang disimpan <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; controller atau sistem operasi</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">b. mengukur gerakan dan getaran <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; sensor</div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">c. mempercepat akses data <span class="badge-correct">benar</span></div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">d. menghubungkan media penyimpanan dengan motherboard <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; interface</div>
+        </li>
+    </ul>
+</div>
+
+<!-- Soal 12 -->
+<div class="question-card">
+    <div class="question-number">12. media penyimpanan magnetik pada komputer menyimpan data menggunakna?</div>
+    <ul class="options-list">
+        <li class="option-item incorrect">
+            <div class="option-text">a. cahaya <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; media penyimpanan optik (CD, DVD, Blu-ray)</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">b. sinyal listrik <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; digunakan untuk mentransfer dan mengirim data antar komponen</div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">c. bahan magnetis <span class="badge-correct">benar</span></div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">d. transistor dan kapasitor <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; digunakan pada memori utama/ram/media flash</div>
+        </li>
+    </ul>
+</div>
+
+<!-- Soal 13 -->
+<div class="question-card">
+    <div class="question-number">13. virus komputer pertama yang menyebar secara luas adalah?</div>
+    <ul class="options-list">
+        <li class="option-item incorrect">
+            <div class="option-text">a. Creeper <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; 1971, virus/worm pertama didunia, tapi tidak menyebar luas</div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">b. Brain <span class="badge-correct">benar</span></div>
+            <div class="sub-explanation">&rarr; 1986</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">c. Melissa <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; baru muncul pada tahun 1999</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">D. ILOVEYOU <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; baru muncul 2000</div>
+        </li>
+    </ul>
+</div>
+
+<!-- Soal 14 -->
+<div class="question-card">
+    <div class="question-number">14. teknik penyembunyian malware untuk mengubah file atau kode malware sehingga sulit dideteksi disebut?</div>
+    <ul class="options-list">
+        <li class="option-item incorrect">
+            <div class="option-text">a. Enkripsi <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; teknik mengacak data</div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">b. Polimorfisme <span class="badge-correct">Benar</span></div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">C. rootkit <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; perangkat lunak yang dirancang untuk menyembunyikan malware dalam sistem komputer</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">d. injection <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; menyisipkan perintah/kode kedalam suatu aplikasi atau sistem input</div>
+        </li>
+    </ul>
+</div>
+
+<!-- Soal 15 -->
+<div class="question-card">
+    <div class="question-number">15. contoh enkripsi simetris dalam keamanan data adalah?</div>
+    <ul class="options-list">
+        <li class="option-item incorrect">
+            <div class="option-text">a. RSA <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; enkripsi asimetris, menggunakan dua kunci berbeda (publik, privat)</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">b. ECC <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; enkripsi asimetris</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">c. MD5 <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; bukan algoritma enkripsi, tapi fungsi hash</div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">d. AES <span class="badge-correct">benar</span></div>
+        </li>
+    </ul>
+</div>
+
+<!-- Soal 16 -->
+<div class="question-card">
+    <div class="question-number">16. berikut beberapa formula pada excel</div>
+    <ul class="options-list">
+        <li class="option-item correct">
+            <div class="option-text">[] SUM u/ menjumlah nilai data dari range tertentu</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">[] COUNT u/ mencari nilai rata-rata <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; menghitung jumlah sel yang berisi angka</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">[] Average u/ mencari nilai tertinggi <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; mencari nilai rata-rata</div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">[] MIN u/ mencari nilai terendah dari range / list data</div>
+        </li>
+    </ul>
+</div>
+
+<!-- Soal 17 -->
+<div class="question-card">
+    <div class="question-number">17. Jenis-jenis sistem bilangan</div>
+    <ul class="options-list">
+        <li class="option-item correct">
+            <div class="option-text">[] bilangan oktal <span class="badge-correct">benar</span></div>
+            <div class="sub-explanation">&rarr; basis 8</div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">[] bilangan desimal <span class="badge-correct">benar</span></div>
+            <div class="sub-explanation">&rarr; basis 10</div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">[] bilangan bulat <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; jenis angka/himpunan matematika</div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">[] bilangan biner <span class="badge-correct">benar</span></div>
+            <div class="sub-explanation">&rarr; basis 16</div>
+        </li>
+    </ul>
+</div>
+
+<!-- Soal 18 -->
+<div class="question-card">
+    <div class="question-number">18. Prinsip kerja memori</div>
+    <ul class="options-list">
+        <li class="option-item correct">
+            <div class="option-text">[] pemuatan data <span class="badge-correct">benar</span></div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">[] penyimpan data <span class="badge-correct">benar</span></div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">[] proses data <span class="badge-correct">benar</span></div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">[] menampilkan data <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; tugas dari perangkat output (monitor, printer)</div>
+        </li>
+    </ul>
+</div>
+
+<!-- Soal 19 -->
+<div class="question-card">
+    <div class="question-number">19.</div>
+    <ul class="options-list">
+        <li class="option-item correct">
+            <div class="option-text">- media penyimpanan fisik adalah komponen utama media penyimpanan <span class="badge-correct">benar</span></div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">- Open Source CMS adlaah perangkat lunak sumber terbuka yang tersedia u/ diunduh dan digunakan gratis <span class="badge-correct">benar</span></div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">- Pada biner boleh angka selain 0 dan 1 <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; hanya terdiri dari 0 dan 1, selain itu tidak diperbolehkan</div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">- Simpul pada graph sering disebut Node <span class="badge-correct">benar</span></div>
+        </li>
+    </ul>
+</div>
+
+<!-- Soal 20 -->
+<div class="question-card">
+    <div class="question-number">20.</div>
+    <ul class="options-list">
+        <li class="option-item incorrect">
+            <div class="option-text">- Basis 16 merupakan sistem bilangan oktal <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; oktal basis 8, heksadesimal basis 16</div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">- plugin pada wordpress merupakan fitur tambahan yang memperkaya fungsionalitas <span class="badge-correct">benar</span></div>
+        </li>
+        <li class="option-item incorrect">
+            <div class="option-text">- Vlog merupakan konten yang berisi teks deskriptif <span class="badge-incorrect">salah</span></div>
+            <div class="sub-explanation">&rarr; vlog = video, teks deskriptif = blog/artikel</div>
+        </li>
+        <li class="option-item correct">
+            <div class="option-text">- sensor digunakan untuk mengukur dan mendeteksi gerakan pada media penyimpanan <span class="badge-correct">benar</span></div>
+        </li>
+    </ul>
+</div>
+
+<footer>
+    &copy; 2026 Muhammad Fahmi - Catatan Pengajar
+</footer>
+
+</body>
+</html>
