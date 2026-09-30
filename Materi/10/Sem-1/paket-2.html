@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teknologi Informasi dan Komunikasi</title>
+<style>
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #16a085;
+    --bg-code: #282c34;
+    --text-main: #333;
+    --accent-blue: #e7f3fe;
+}
+
+body { 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    line-height: 1.8; 
+    color: var(--text-main);
+    max-width: 900px; 
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #fdfdfd;
+}
+
+h1 { border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; color: #2c3e50; font-size: 2.2rem; }
+h2 { color: #2980b9; margin-top: 2.5em; border-left: 5px solid var(--primary-color); padding-left: 15px; background: #f8f9fa; padding-top: 5px; padding-bottom: 5px; }
+h3 { color: var(--secondary-color); margin-top: 1.8em; border-bottom: 1px dashed #ccc; padding-bottom: 5px; }
+
+ul, ol { margin-bottom: 20px; }
+li { margin-bottom: 8px; }
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    margin: 20px 0;
+}
+
+code {
+    font-family: 'Consolas', monospace;
+    background: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #e74c3c;
+}
+
+blockquote {
+    margin: 25px 0;
+    padding: 15px 25px;
+    background-color: var(--accent-blue);
+    border-left: 5px solid #2196F3;
+    color: #0c5460;
+    border-radius: 0 8px 8px 0;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 20px 0;
+    font-size: 0.85rem;
+    color: #999;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.arrow-list { list-style: none; padding-left: 0; }
+.arrow-list li::before { content: "→ "; color: var(--primary-color); font-weight: bold; }
+</style>
+</head>
+<body>
+<a href="../../../index.html" style="text-decoration: none; color: #3498db; font-weight: bold;">&larr; Kembali ke Daftar Materi</a>
+
+<h1>Paket II Teknologi Informasi dan Komunikasi</h1>
+
+<section class="card">
+
+    <h2>2.1 Penjelasan</h2>
+    <ul class="arrow-list">
+        <li>Pengolah Kata &rarr; Membuat dan mengolah dokumen &rarr; Word, Open Office Word, Google Docs</li>
+        <li>Pengolah Lembar Kerja &rarr; Lembar kerja pengolah data, Perhitungan data, Pengolah data statistik, Menampilkan diagram data &rarr; Microsoft Office, Open Office Spreadsheet, Google Sheets</li>
+        <li>Pembuat Presentasi &rarr; Membuat slide presentasi mudah, cepat, menarik &rarr; Microsoft PowerPoint, Open Office Presentation, Google Slides</li>
+    </ul>
+
+    <p>rumus fungsi statistik excel:</p>
+    <ol>
+        <li><strong>Sum</strong><br>Menjumlahkan data dalam list / range tertentu</li>
+        <li><strong>Average</strong><br>Mencari nilai rata-rata dalam list / range tertentu</li>
+        <li><strong>Count</strong><br>Menhitung banyak data dalam list / range tertentu</li>
+        <li><strong>Max</strong><br>Mencari nilai maximum / terbesar dalam list / range tertentu</li>
+        <li><strong>Min</strong><br>Mencari nilai minimum / terkecil dalam list / range tertentu</li>
+    </ol>
+
+    <p>Integrasi konten antar aplikasi:</p>
+    <ol>
+        <li><strong>Perintah Cut, Copy, Paste</strong>
+            <ul class="arrow-list">
+                <li>a. Cut (Ctrl + X) memindahkan objek ke clipboard (penyimpanan sementara)</li>
+                <li>b. Copy (Ctrl + C) menyalin objek ke clipboard</li>
+                <li>c. Paste (Ctrl + V) memindahkan objek dari clipboard ke tujuan</li>
+            </ul>
+        </li>
+        <li><strong>Konten pada aplikasi</strong>
+            <p>digunakan pada salah satu aplikasi yang otomatis membuka aplikasi lainnya</p>
+            <p>contoh: Insert Chart pada Microsoft Word</p>
+        </li>
+        <li><strong>Object Linking dan Embedding (OLE)</strong>
+            <p>memungkinkan sebuah aplikasi terhubung dengan aplikasi lain, dengan fitur dan hasil.</p>
+            <p>perubahan pada sumber mengakibatkan perubahan pada aplikasi lainnya</p>
+        </li>
+    </ol>
+
+    <h3>2.1.1 Integrasi Word dan Excel</h3>
+    <p>langkahnya:</p>
+    <ol>
+        <li>Buka Microsoft Word</li>
+        <li>Insert &rarr; Chart &rarr; pilih jenis chart &rarr; OK</li>
+        <li>Excel otomatis terbuka, isi dengan data, tutup kembali</li>
+        <li>ubah judul grafik dan diagram dengan double click chart title</li>
+    </ol>
+
+    <h3>2.1.2 Integrasi PowerPoint</h3>
+    <p>langkahnya:</p>
+    <ol>
+        <li>Buka Microsoft PowerPoint</li>
+        <li>Insert &rarr; Table &rarr; Excel Spreadsheet &rarr; membuka worksheet otomatis</li>
+        <li>Table dan fitur excel dapat langsung digunakan, hasilnya otomatis tampil</li>
+        <li>update data dengan double click tabel</li>
+    </ol>
+
+    <h3>2.1.3 Membuat Diagram pada PowerPoint dengan Excel</h3>
+    <p>langkahnya:</p>
+    <ol>
+        <li>Buka Microsoft PowerPoint</li>
+        <li>Insert &rarr; Chart &rarr; pilih jenis diagram &rarr; OK</li>
+        <li>diagram dan spreadsheet excel otomatis muncul</li>
+        <li>tutup worksheet excel, ubah judul dengan double click Chart Title</li>
+    </ol>
+
+    <h3>2.1.4 Object Linking & Embedding (OLE) pada Excel ke Word</h3>
+    <p>Bisa dilakukan dengan copy paste, tapi datanya akan statis</p>
+    <p>langkahnya:</p>
+    <ol>
+        <li>Buka Microsoft Excel</li>
+        <li>Buat tabel</li>
+        <li>Block Select tabel, lalu copy</li>
+        <li>Buka Microsoft Word</li>
+        <li>Paste Options &rarr; Link & Keep Source Formatting atau Link & Use Destination Style</li>
+        <li>Perubahan pada excel akan diterapkan otomatis ke word</li>
+    </ol>
+
+    <h3>2.1.5 Object Linking & Embedding (OLE) pada Excel ke PowerPoint</h3>
+    <ol>
+        <li>Buka Microsoft Excel</li>
+        <li>Buat tabel</li>
+        <li>Save</li>
+        <li>Buka PowerPoint</li>
+        <li>Gunakan menu Insert Object</li>
+        <li>Pilih file Excel &rarr; centang opsi Link &rarr; OK</li>
+        <li>Perubahan pada excel akan diterapkan otomatis ke powerpoint</li>
+    </ol>
+
+    <h3>2.1.6 Pemrosesan Dokumen dengan Perangkat Lunak Perkantoran</h3>
+
+    <h4>A. Mail Merge</h4>
+    <p>fitur yang digunakan untuk menghasilkan surat, amplop, undangan, dll secara berulang dengan beberapa komponen yang berbeda</p>
+    <p>Langkah:</p>
+    <ol>
+        <li>Buka Excel</li>
+        <li>buat tabel data yang diinginkan</li>
+        <li>simpan file excel</li>
+        <li>buka word</li>
+        <li>buat dokumen</li>
+        <li>Mailing &rarr; Select recipients &rarr; Use an existing list</li>
+        <li>cari file excel yang dibuat</li>
+        <li>open &rarr; pilih sheet &rarr; OK</li>
+        <li>Letakkan cursor pada kanan teks</li>
+        <li>Insert Merge Field &rarr; pilih hubungan</li>
+        <li>ulangi langkah 9 - 10 untuk bagian lain</li>
+        <li>klik preview result untuk melihat hasil</li>
+    </ol>
+
+    <h4>B. Daftar Isi</h4>
+    <p>ada di tab Reference</p>
+    <p>ms. word membuat daftar isi otomatis berdasarkan dokumen yang diberi style Heading 1, Heading 2, Heading 3</p>
+</section>
+
+<footer>
+    &copy; 2026 Muhammad Fahmi - Catatan Pengajar
+</footer>
+</body>
+</html>
